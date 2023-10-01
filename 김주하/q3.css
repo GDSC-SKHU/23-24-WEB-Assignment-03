@@ -35,10 +35,11 @@ nav {
     background-color: #03c75a;
     border: 1px solid lightgray;
     color:#fff;
-    width: 105%;
+    width: 93%;
     height: 50px;
     font-size: 16px;
     margin-top: 40px;
+    margin-left: 23px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -63,6 +64,7 @@ input.form-control {
     border:1px solid lightgray;
     border-radius: 5px;
     margin-left: 25px;
+    margin-top: 50px;
 }
 
 #inputId{border-bottom: 1px solid lightgray;}
@@ -87,7 +89,29 @@ li {
     padding: 0px 0px 15px 0px;
     padding-top: 15px;
     border: none;
+    outline: none;
 }
+.form-control:focus{
+    width: 332px;
+    border: 1px solid #03c75a;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#inputId:focus{
+    border-bottom: 1px solid #03c75a;
+}
+
+#inputPw:focus{
+    border-top: 1px solid #03c75a;
+    border-bottom: 1px solid #03c75a;
+}
+#inputEmail:focus{
+    border-top: 1px solid #03c75a;
+    border-bottom: 1px solid #03c75a;
+}
+
 
 button[type="submit"]:focus {
     border: 2px solid blue;
@@ -114,5 +138,19 @@ li{
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
 }
+
 #inputPhone{border-top: 1px solid lightgray;}
 
+#inputName:focus{
+    border-bottom: 1px solid #03c75a;
+}
+
+#inputBD:focus{
+    border-top: 1px solid #03c75a;
+    border-bottom: 1px solid #03c75a;
+}
+
+#inputPhone:focus{
+    border-top: 1px solid #03c75a;
+    border-bottom: 1px solid #03c75a;
+}

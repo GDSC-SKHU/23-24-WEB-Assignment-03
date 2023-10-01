@@ -44,11 +44,20 @@ a {
     font-size: 80px;
     text-align: center;
     align-items: center;
-    padding-top: 10%;
+    
+
 }
 
 .page div {
-    display: none;
+    display: none; /*초기 요소 안 보이게 */
+    position: relative;
+
+}
+.pageElem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 img{

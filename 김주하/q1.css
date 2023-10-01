@@ -44,9 +44,9 @@ img {
     border: 1px solid lightgray;
 } 
 
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: lightgray;
-}
+/* input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #03c75a;
+} */
 
 .btn_login {
     width: 327px;
@@ -69,6 +69,22 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 input.form-control {
     padding-left: 36px; /* 아이콘이 겹치지 않도록 왼쪽 여백 추가 */
+    
+}
+.form-control:focus{
+    width: 290px;
+    border: 1px solid #03c75a;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#inputId:focus{
+    border-bottom: 1px solid #03c75a;
+}
+
+#inputPw:focus{
+    border-top: 1px solid #03c75a;
 }
 
 #inputId{
