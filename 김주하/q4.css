@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    margin:0 auto;
+    height: 100%;
+}
+
+html, body{
+    height: 100%;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid lightgray;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid lightgray;
+    border-top:1px solid lightgray;
+}
+
+li {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    border-top:1px solid lightgray;
+    height: 25px;
+    text-align: left;
+    color:black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    float: left;
+    width: 80%;
+    height: 100%;
+    color:lightgray;
+    font-size: 80px;
+    text-align: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.page div {
+    display: none;
+}
+
+img{
+    width:80px;
+    margin:10px;
+}
+

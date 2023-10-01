@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../김주하/q2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="GDSC_logo"><img src="../과제/GDSC.png"></div>
+    </nav>
+    <div class="container">
+        <form id="loginForm" action="../김주하/sucess.html">
+            <div class="item_checkall">
+                <ul>
+                    <li id="check1">
+                        <!-- <div class="input_check"> -->
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1"><span><strong>[필수]</strong>가입약관</span></label>
+                        <!-- </div> -->
+                        <div class="textbox">
+                            G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 
+                            본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 
+                            잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.
+                        </div>
+                    </li>
+                <li id="check2">
+            <!-- <div class="input_check"> -->
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2"><span><strong>[필수]</strong>개인정보 수집</span></label>
+            <!-- </div> -->
+                    <div class="textbox">
+                        실명 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트·혜택 정보 수신 동의를 포함합니다.
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <button type="submit" class="btn_login" disabled><strong>로그인</strong></button>
+        </form>
+    </div>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const loginButton = document.querySelector('.btn_login');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateButtonState);
+        });
+
+        function updateButtonState() {
+            const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+            if (allChecked) {
+                loginButton.classList.add('active');
+                loginButton.removeAttribute('disabled');
+            } else {
+                loginButton.classList.remove('active');
+                loginButton.setAttribute('disabled', 'true');
+            }
+        }
+    </script>
+</body>
+</html>

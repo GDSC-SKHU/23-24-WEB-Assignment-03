@@ -1,0 +1,118 @@
+img{
+    width:80px;
+}
+.show {
+    display : block
+  }
+
+.hide-model{
+    display: none;
+  }
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: left; /* 텍스트는 왼쪽 정렬로 설정 */
+}
+
+.container .textbox{
+    text-align: left; /* 텍스트 박스 내용을 왼쪽 정렬로 설정 */
+}
+
+.container{
+    margin-top: 40px;
+}
+
+nav {
+    text-align: left; /* 내용을 왼쪽 정렬로 유지 */
+}
+
+.btn_login {
+    background-color: #03c75a;
+    border: 1px solid lightgray;
+    color:#fff;
+    width: 105%;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    left: 10px; /* 아이콘의 왼쪽 위치 조정 */
+    top: 50%; /* 수직 가운데 정렬 */
+    transform: translateY(-50%); /* 수직 가운데 정렬을 위한 변형 */
+    font-family: 'Material Symbols Outlined', sans-serif; /* 아이콘 폰트를 지정 */
+    font-size: 24px; /* 아이콘 크기 조정 */
+}
+
+input.form-control {
+    padding-left: 36px; /* 아이콘이 겹치지 않도록 왼쪽 여백 추가 */
+}
+
+
+#require{
+    width:92%;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+#inputId{border-bottom: 1px solid lightgray;}
+
+#inputPw{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+#inputEmail{border-top: 1px solid lightgray;}
+
+.textbox{
+    border-color: lightgray;
+    position: relative;
+}
+
+li {
+    display: none;
+}
+
+.form-control{
+    width: 332px;
+    padding: 0px 0px 15px 0px;
+    padding-top: 15px;
+    border: none;
+}
+
+button[type="submit"]:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+
+li{
+    list-style: none;
+    color:red;
+    font-size: 5px;
+}
+
+#infomation{
+    width: 92%;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+#inputName{border-bottom: 1px solid lightgray;}
+
+#inputBD{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+#inputPhone{border-top: 1px solid lightgray;}
+

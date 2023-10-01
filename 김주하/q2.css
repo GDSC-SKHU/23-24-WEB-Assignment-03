@@ -1,0 +1,73 @@
+html, body{
+    background-color: #302e2e;
+    margin: 0 auto;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: left; /* 텍스트는 왼쪽 정렬로 설정 */
+}
+
+.container .textbox {
+    text-align: left; /* 텍스트 박스 내용을 왼쪽 정렬로 설정 */
+}
+
+.container{
+    margin-top: 40px;
+}
+
+nav {
+    text-align: left; /* 내용을 왼쪽 정렬로 유지 */
+}
+
+.btn_login {
+    background-color: dimgray; /* 초기 상태에서 비활성화된 색상 */
+    color: lightgray;
+    width: 105%;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.btn_login.active {
+    background-color: #03c75a; /* 활성화된 색상 */
+    cursor: pointer;
+}
+
+span > strong{
+    color:#03c75a;
+}
+span{
+    color:#ccc;
+}
+
+img{
+    width:80px;
+}
+
+.textbox{
+    border:1px solid dimgray;
+    border-radius: 5px;
+    padding: 10px;
+    color: dimgray;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+#check2{
+    margin-top: 40px;
+}
