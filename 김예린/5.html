@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+ 
+        button{
+            color: white; padding:7px; margin: 2px;
+            border: none; border-radius: 5px;
+        }
+        .redbtn { background-color: rgb(220, 20, 20);  }
+        .bluebtn{ background-color: rgb(14, 87, 223);}
+        #loginForm{ 
+            display: none; width: 90%; border-radius: 5px; padding:20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); margin:3%;
+            position: absolute; top: 0; z-index: 1;
+            background-color: #fff;
+        }
+        input{ width: 90%; margin: 5px; border: 1px solid lightgray; border-radius: 2px;
+        padding: 5px;}
+    </style>
+</head>
+<body>
+    <h1>셔츠팝니다.</h1>
+    <button class="redbtn" onclick="show()">로그인</button>
+    <form id="loginForm" action="success.html" onsubmit="return finput()">
+        <h1>로그인하세요</h1>
+        <input type="text" id="id"> <br>
+        <input type="text" id="pass"><br>
+        <button class="bluebtn">전송</button><button class="redbtn" onclick="hide()">닫기</button>
+    </form>
+    
+    <script>
+    const form = document.getElementById("loginForm");
+    
+        function show() {
+             form.style.display = "block"; //보이기
+            document.body.style.backgroundColor="rgba(0,0,0,0.5)";
+        }
+
+        function hide() {
+            event.preventDefault(); //닫기 누를때 succes 페이지로 넘어가는 기본 동작 막기
+             form.style.display = "none"; //안보이게 숨기기
+            document.body.style.backgroundColor="";
+        }
+        function finput(){
+            const inputid = document.getElementById("id").value;
+            const inputpass = document.getElementById("pass").value;
+
+            if(inputid === "" ){
+                alert("아이디를 입력해주세요");
+                return false;
+            }
+            else if(inputpass === ""){
+                alert("비밀번호를 입력해주세요");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        .container{ 
+            width: 400px;  margin:auto; position:relative;
+        }
+        input{ border-radius: 5px;  margin-left: 5%; width: 80%;
+             border-color: lightgrey; padding: 10px;
+             outline: 0; border: 0.5px solid lightgray;
+        }
+        input:focus{
+           outline: 1px solid #03c75a;  cursor: pointer;             
+        }
+        form{ border: 1px solid lightgray; border-radius: 5px;}
+        .btn{ margin: 5%; border: none; border-radius: 5px; padding:10px;
+              width: 90%; background-color: #03c75a;  color:white;             
+            margin-top: 40px;  margin-bottom: 20px; 
+        }
+        .loginu{ position: relative;      
+        }
+        .uid { position: absolute;  top: 25px; left:7%;   }       
+        .up { position: absolute;  top: 5px; left:7%;}       
+        .loginu input{  padding-left: 30px; }
+        img{ max-width: 100%; max-height: 100%;}
+        .logo_img { height: 100px; width: 100px;}
+        p{font-size: small; color: red; margin-left: 5%;}
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top:10px;">
+       
+        <div class="logo_img">
+            <img src="./GDSC.png" alt="logoimg">
+        </div>
+
+         <form id="form" action="success.html">
+         <div class="one">
+           <div class="loginu"> <span class="uid"><i class="fa fa-user"></i> </span>   
+            <input type="text" placeholder= "아이디" name="userid" id="userid"style="margin-top: 5%;"/>          </div> 
+          <div class="loginu"> <span class="up"><i class="fa fa-lock"></i>     </span>       
+            <input type="password" placeholder="비밀번호" name="passwd" id="pass"/>            
+          </div> 
+          <div class="loginu"> <span class="up"><i class="fa fa-envelope"></i> </span>   
+            <input type="text" placeholder= "이메일" name="email" id="email" />           
+          </div> 
+          <p id="emailError" class="error-message"> </p>
+          <p id="passError" class="error-message"> </p>
+          <p id="useridError" class="error-message"> </p>
+
+
+        </div>
+        <div class="one">
+            <div class="loginu"> <span class="uid"><i class="fa fa-user"></i> </span>   
+             <input type="text" placeholder= "이름" name="name" id="name"style="margin-top: 5%;"/> 
+            </div> 
+           <div class="loginu"> <span class="up"><i class="fa fa-calendar"></i>     </span>       
+             <input type="text" placeholder="생년월일6자리" name="birthday" id="birthday"/>            
+           </div> 
+           <div class="loginu"> <span class="up"><i class="fa fa-phone"></i> </span>   
+             <input type="text" placeholder= "휴대전화" name="phone" id="phone" />           
+           </div> 
+           <p id="nameError" class="error-message"> </p>
+           <p id="dayError" class="error-message"> </p>
+           <p id="phoneError" class="error-message"> </p>
+ 
+           <button type="submit" class="btn" >로그인</button>
+         </div>
+        </form>
+        
+    </div>
+
+    <script>
+        const form = document.getElementById('form');
+        const useridInput = document.getElementById('userid');
+        const passInput = document.getElementById('pass');
+        const emailInput = document.getElementById('email');
+        const useridError = document.getElementById('useridError');
+        const passError = document.getElementById('passError');
+        const emailError = document.getElementById('emailError');
+        const nameInput = document.getElementById('name');
+        const birthdayInput = document.getElementById('birthday');
+        const phoneInput = document.getElementById('phone');
+        const nameError = document.getElementById('nameError');
+        const birthdayError = document.getElementById('dayError');
+        const phoneError = document.getElementById('phoneError');
+    
+        form.addEventListener('submit', function (event) {
+            if (!useridInput.value) {
+                useridError.textContent = '아이디: 필수 정보입니다';
+                event.preventDefault();
+            } else {
+                useridError.textContent = '';
+            }
+    
+            if (!passInput.value) {
+                passError.textContent = '비밀번호: 필수 정보입니다.';
+                event.preventDefault();
+            }else if( !/^(?=.*[a-zA-Z])((?=.*\d)(?=.*\W)).{8,16}$/.test(passInput.value)){
+                passError.textContent = "비밀번호: 대문자,소문자,특수문자(@ ! %)를 확인하세요"
+            }
+             else {
+                passError.textContent = '';
+            }
+    
+            if (!emailInput.value) {
+                emailError.textContent = '이메일: 필수 정보입니다.';
+                event.preventDefault();
+            } else {
+                emailError.textContent = '';
+            }
+            if (!nameInput.value) {
+                nameError.textContent = '이름: 필수 정보 입니다.';
+                event.preventDefault();
+            } else {
+                nameError.textContent = '';
+            }
+    
+            if (!birthdayInput.value) {
+                birthdayError.textContent = '생년월일: 필수 정보 입니다.';
+                event.preventDefault();
+            } else {
+                birthdayError.textContent = '';
+            }
+    
+            if (!phoneInput.value) {
+                phoneError.textContent = '전화번호: 필수 정보 입니다.';
+                event.preventDefault();
+            } else {
+                phoneError.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>

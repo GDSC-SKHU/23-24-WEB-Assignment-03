@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        .container{ 
+            width: 400px;   
+            margin:auto; position:relative;
+        }
+        input{ border-radius: 5px;  margin-left: 5%; width: 80%;
+             border-color: lightgrey; padding: 10px;
+             outline: 0; border: 0.5px solid lightgray;
+        }
+        input:focus{
+           outline: 1px solid #03c75a;  cursor: pointer;   
+          
+        }
+        form{ border: 1px solid lightgray; border-radius: 5px;}
+        .btn{ margin: 5%; border: none; border-radius: 5px; padding:10px;
+              width: 90%; background-color: #03c75a;  color:white;             
+            margin-top: 40px;  margin-bottom: 20px; 
+        }
+        .loginu{ position: relative;      
+        }
+        .uid { position: absolute;  top: 25px; left:7%;   }
+       
+        .up { position: absolute;  top: 5px; left:7%;}
+       
+        .loginu input{  padding-left: 30px; }
+        img{ max-width: 100%; max-height: 100%;}
+        .logo_img { height: 250px; width: 400px;}
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top:10px;">
+       
+        <div class="logo_img">
+            <img src="./logo.png" alt="logoimg">
+          </div>
+         <form id="form" action="success.html">
+           <div class="loginu"> <span class="uid"><i class="fa fa-user"></i> </span>   
+            <input type="text" placeholder= "아이디" name="userid" id="username"style="margin-top: 5%;"/>
+          </div> 
+          <div class="loginu"> <span class="up"><i class="fa fa-lock"></i>     </span>       
+            <input type="password" placeholder="비밀번호" name="passwd" id="pass"/>
+          </div> 
+          <button type="submit" class="btn"  >로그인</button>
+         
+        </form>
+        
+    </div>
+    <script>
+        let loginform = document.getElementById("form");
+        loginform.addEventListener("submit", function(e){
+            let username = document.getElementById("username");
+            if(username.value.length == 0) {  // 아이디가 입력되지않으면
+                alert('아이디를 입력하세요'); //경고문
+                e.preventDefault();	 
+            }
+            let pass = document.getElementById("pass");
+            if(pass.value.length == 0) {  // 비번이 입력되지않으면
+                alert('비밀번호를 입력하세요'); //경고문
+                e.preventDefault();	 
+            }
+
+        });
+        
+    </script>
+</body>
+</html>
