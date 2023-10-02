@@ -20,11 +20,39 @@
         }
         input{ width: 90%; margin: 5px; border: 1px solid lightgray; border-radius: 2px;
         padding: 5px;}
+        nav {
+        display: flex; background-color: whitesmoke;    justify-content: space-around;
+         align-items: center;        height: 50px; padding: 10px;
+        }
+        .toggle div {
+             margin: 3px;    transition: all 0.3s ease;
+            width: 23px;  height: 3px;   
+          background: gray;
+        }
+        .navb{ 
+            margin-right: auto; font-size: 30px; font-weight: bold;
+        }
+        .toggle{ padding:5px; border: 1px solid gray; border-radius: 5px;}
+        .back{  background-color: lightgray; padding-left:10px; padding-top:  5%; padding-bottom: 5%;}
     </style>
 </head>
 <body>
+    
+    <nav>
+        <div class="navb">Navbar</div>               
+           
+        <div class="toggle">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+            
+    </nav>
+  
+    <div class="back">
     <h1>셔츠팝니다.</h1>
     <button class="redbtn" onclick="show()">로그인</button>
+    </div>
     <form id="loginForm" action="success.html" onsubmit="return finput()">
         <h1>로그인하세요</h1>
         <input type="text" id="id"> <br>
