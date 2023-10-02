@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/박예은/3.css">
+    <title>q3</title>
+</head>
+<body>
+    <div class="container">
+        <img src="/박예은/GDSC.png" alt="gdsc" class="img">
+        <div class="main">
+                <div class="box1">
+                    <div class="idbox">
+                        <input type="text" class="idinput" placeholder="아이디" id="username">
+                    </div>
+                    <div class="pwbox">
+                        <input type="password" class="pwinput" placeholder="비밀번호"  id="password">
+                    </div>
+                    <div class="emailbox">
+                        <input type="text" class="emailinput" placeholder="이메일" id="email">
+                    </div>
+                    <div style="line-height: 20%;">
+                    <ul class="error id-error"></ul><br>
+                    <ul class="error pw-error"></ul><br>
+                    <ul class="error email-error"></ul>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="namebox">
+                        <input type="text" class="nameinput" placeholder="이름" id="name">
+                    </div>
+                    <div class="birthbox">
+                        <input type="text" class="birthinput" placeholder="생년월일6자리"  id="birth">
+                    </div>
+                    <div class="phonebox">
+                        <input type="text" class="phoneinput" placeholder="휴대전화"  id="number">
+                    </div>
+                </div>
+            <button class="login" id="btn">로그인</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const Btn = document.getElementById('btn');
+
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const emailInput = document.getElementById('email');
+
+            const idErrorList = document.querySelector('.id-error');
+            const pwErrorList = document.querySelector('.pw-error');
+            const emailErrorList = document.querySelector('.email-error');
+
+
+            Btn.addEventListener('click', function (e) {
+                
+                e.preventDefault();
+
+                const username = usernameInput.value;
+                const password = passwordInput.value;
+                const email = emailInput.value;
+
+                idErrorList.innerHTML = '';
+                pwErrorList.innerHTML = '';
+                emailErrorList.innerHTML = '';
+
+                if (username === '') {
+
+                    idErrorList.innerHTML = '<li>*아이디는 필수 정보입니다.</li>';
+
+                }
+
+                if (password === '') {
+
+                    pwErrorList.innerHTML = '<li>*비밀번호는 필수 정보입니다.</li>';
+                }
+
+                if (email === '') {
+
+                    emailErrorList.innerHTML = '<li>*이메일은 필수 정보입니다.</li>';
+                }
+
+                const passwordExam = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[@!%]).*$/;
+                if (pwErrorList.innerHTML === '' && !passwordExam.test(password)) {
+
+                    pwErrorList.innerHTML = '<li>*비밀번호에는 대문자, 소문자, 특수문자 (@,!,%) 중 하나를 포함해야 합니다.</li>';
+                }
+
+                if (idErrorList.innerHTML === '' && pwErrorList.innerHTML === '' && emailErrorList.innerHTML === '') {
+
+                    window.location.href = '5_success.html';
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

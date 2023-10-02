@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/박예은/4.css">
+    <title>q4</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="num0"><img src="/박예은/GDSC.png" alt="gdsc"></div>
+        <div class="num num1">1.페이지</div>
+        <div class="num num2">2.페이지</div>
+        <div class="num num3">3.페이지</div>
+        <div class="num num4">4.페이지</div>
+        <div class="num num5">5.페이지</div>
+    </div>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+        const nums = document.querySelectorAll(".num");
+
+        nums.forEach((num) => {
+
+            num.addEventListener("click", () => {
+
+                const page_num = num.innerText.split(".")[0];
+                show_number(page_num);
+
+            });
+        });
+
+        function show_number(page_num) {
+
+            const pageDisplay = document.createElement("div");
+
+            pageDisplay.className = "page_display";
+            pageDisplay.innerText = page_num;
+
+            const pageContainer = document.createElement("div");
+
+            pageContainer.className = "page_container";
+            pageContainer.append(pageDisplay);
+
+            const existing_page = document.querySelector(".page_display");
+
+            if (existing_page) {
+
+                existing_page.remove();
+                
+            }
+
+            document.body.append(pageContainer);
+        }
+    });
+
+    </script>
+</body>
+</html>
