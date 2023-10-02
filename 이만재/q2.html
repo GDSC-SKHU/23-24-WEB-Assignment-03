@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="Ko">
+    <head>
+        <link rel="stylesheet" href="q2.css">
+        <meta charset="UTF-8">
+       
+    </head>
+    <body>
+        <div class="Container">
+            <div class="GDSC_logo"><img src="../과제/GDSC.png"></div>
+            <div class="join_box">
+                <input type="checkbox" id="join_check_box">
+                <label for ="join_checkbox"><span style="color:#03c75a;">[필수]</span>가입약관</label></div>
+                <div class="join_text_box">
+                    <p>G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 
+                        본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 
+                        잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.</p>
+                </div>
+                <div class="inpor_box">
+                    <input type="checkbox" id="inpor_check_box">
+                    <label for ="inpor_checkbox"><span style="color:#03c75a;">[필수]</span>개인정보수집</label></div>
+                    <div class="inpor_text_box">
+                        <p>실명 인증된 아이디로 가입,위치기반서비스 이용약관,이벤트・혜택 정보 수신 동의를 포함합니다. </p>
+                </div>
+                <button id="login_btn" onclick="login_page()" disabled>로그인</button> <!--기본 버튼은 비활성화 상태-->
+                <div>
+                  
+            
+           
+        <script>
+            
+            const join_check_box = document.getElementById('join_check_box');
+            const inpor_check_box = document.getElementById('inpor_check_box');
+            const login_btn = document.getElementById('login_btn');
+
+            join_check_box.addEventListener('change',updateLoginButton);
+            inpor_check_box.addEventListener('change',updateLoginButton);
+            
+            function changeButtonColor(){
+                login_btn.style.backgroundColor ='#03c75a'; /*로그인 버튼생깔이 바뀜*/
+                login_btn.style.color='white';/*로그인 버튼 글자 색이 바뀜*/
+            }
+
+            function resetButtonColor(){
+                login_btn.style.backgroundColor ='';
+                login_btn.style.color='';
+            }
+
+            function updateLoginButton(){
+             if(join_check_box.checked && inpor_check_box.checked){
+                 login_btn.disabled = false;
+                 changeButtonColor(); /*체크박스를 둘 다 체크되어 로그인 버튼이 활성화 됐을 때 로그인 버튼색이 지정해둔 색으로 바뀜*/
+            
+             } else{
+                 login_btn.disabled = true;
+                 resetButtonColor(); /* 체크박스가 하나만 체크되거나 둘 다 체크가 되지 않을 경우  로그인 버튼 색상을 비활상화일 때로 바꿈*/
+             }
+             }
+
+             function login_page()
+             {
+                location.href='Success.html'    
+             }
+
+
+
+         
+     </script>
+    </body>
+</html>

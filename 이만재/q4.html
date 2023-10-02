@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="Ko">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="q4.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+    <div class="Container">
+        <div class="Nav">
+            <div class="GDSC_logo"><img src="../과제/GDSC.png"></div>
+            <button class="pageBtn" data-page="1">1.페이지</button>
+            <button class="pageBtn" data-page="2">2.페이지</button>
+            <button class="pageBtn"data-page="3">3.페이지</button>
+            <button class="pageBtn" data-page="4">4.페이지</button>
+            <button class="pageBtn" data-page="5">5.페이지</button>
+        </div>
+        <div class="Num_page"></div>
+    </div>
+    
+    <script>
+
+        $(document).ready(function(){
+            $('.pageBtn').on('focus',function() {
+                const pageNumber = $(this).data('page'); /* 클릭된 버튼의 data-page 속성에 저장된 값을 pageNumber에 저장*/
+                $('.Num_page').text(pageNumber); /*가져온 페이지 번호를 Num_page의 요소에 텍스트로 설정*/
+            });
+        });
+
+
+        /*let Num_page = document.querySelector('.Num_page');
+        let page_1 = document.querySelector('.page_1');
+        let page_2 = document.querySelector('.page_2');
+        let page_3 = document.querySelector('.page_3');
+        let page_4 = document.querySelector('.page_4');
+        let page_5 = document.querySelector('.page_5');
+        
+    
+        page_1.addEventListener('click', () => {
+            const pageNumber = 1;
+            Num_page.textContent = `${pageNumber}`;
+        });
+        page_2.addEventListener('click', () => {
+            const pageNumber = 2;
+            Num_page.textContent = `${pageNumber}`;
+        });
+        page_3.addEventListener('click', () => {
+            const pageNumber = 3;
+            Num_page.textContent = `${pageNumber}`;
+        });
+        page_4.addEventListener('click', () => {
+            const pageNumber = 4;
+            Num_page.textContent = `${pageNumber}`;
+        });
+        page_5.addEventListener('click', () => {
+            const pageNumber = 5;
+            Num_page.textContent = `${pageNumber}`;
+        });*/
+    </script>
+    
+    </body>
+</html>
