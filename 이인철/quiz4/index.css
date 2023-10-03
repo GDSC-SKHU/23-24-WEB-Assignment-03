@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+#gdsc{
+    width: 50px;
+    height: 30px;
+}
+.container{
+    display:flex;
+    height:100vh;
+    border:solid 1px black;
+    
+
+}
+.navbar{
+    height: 100%;
+    width:20%;
+    border:solid 1px black;
+
+}
+
+#pageContent{
+    width:80%;
+    display: flex;
+    flex-direction: column; /* 내용을 세로로 중앙 정렬하기 위해 세로 방향으로 설정 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬*/
+    height: 100%; 
+    color:rgb(242, 233, 233);  
+    font-size: 50px;
+    
+}
+li{
+    border:solid 1px whitesmoke;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    margin:5px 0;
+}

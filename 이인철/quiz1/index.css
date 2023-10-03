@@ -1,0 +1,39 @@
+.container{
+    width:400px;
+    margin: 0 auto;
+}
+.form-floating{
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+.mb-4{
+    width:400px;
+    height:200px;
+}
+
+.lock-icon{
+    position: absolute;
+    left: 10px;
+
+}
+.form-control{
+    padding-left: 60px;
+    width:240px;
+
+}
+.user-icon {
+    position: absolute;
+    left: 10px; 
+  }
+#log{
+    width:305px;
+    background-color: lawngreen;
+}
+#under{
+    border: solid 1px black;
+    padding:20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/users/loginform2.jsp</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
+<link rel="stylesheet" href="index.css">
+<script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body> 
+<div class="container">
+   <div class="form-signin">
+      <form action="success.html" method="get">
+         <img class="mb-4" src="/23-24-WEB-Assignment-03/이인철/quizimg/logo.png">
+      <div id="under">   
+         <div class="form-floating">
+            <i class="fas fa-user user-icon"></i>
+            <input type="text" class="form-control" id="id" placeholder="아이디">
+         </div>
+         <div class="form-floating">
+            <input type="password" class="form-control" id="pwd" placeholder="비밀번호">
+                <i class="fas fa-lock lock-icon"></i>
+         </div>
+         <button type="submit" class="btn btn-primary send" id="log">로그인</button>
+         </div>
+   </form>
+    </div>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+    $('form').on('submit',function(e) {
+        if($('input[type="text"]').val()===""){
+          e.preventDefault();
+          alert("id를 입력하세요");
+        }
+        else if($('input[type="password"]').val()===""){
+            e.preventDefault();
+            alert("패스워드를 입력하세요");
+        }
+      });
+   </script>
+   
+</body>
+</html>

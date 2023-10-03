@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> <!-- 스타일 파일 추가 -->
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <div class="container">
+    <nav class="navbar">
+        <img src="/23-24-WEB-Assignment-03/이인철/quizimg/GDSC.png" id="gdsc">
+        <ol class="list-group" type="1">
+            <li class="list1" id="page1">페이지</li>
+            <li class="list2" id="page2">페이지</li>
+            <li class="list3" id="page3">페이지</li>
+            <li class="list4"id="page4">페이지</li>
+            <li class="list5"id="page5">페이지</li>
+        </ol>
+    </nav>
+    
+    <div id="pageContent">
+    </div>
+    </div>
+
+    <script>
+        function displayPage(pageNumber) {
+            const pageContent = document.getElementById("pageContent");
+            pageContent.innerHTML = `<h2>${pageNumber}</h2>`;
+        }
+        for (let i = 1; i <= 5; i++) {
+            const listItem = document.getElementById(`page${i}`);
+            listItem.addEventListener("click", () => {
+                displayPage(i);
+            });
+        }
+    </script>
+</body>
+</html>

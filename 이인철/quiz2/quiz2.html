@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="in_img" >
+            <img src="/23-24-WEB-Assignment-03/이인철/quizimg/GDSC.png" id="gdsc">
+
+        </div>
+        <br>
+        <div class="check1">
+            <input type="checkbox" value="1" id="checka"><span class="a">[필수]</span> 가입약관
+            <br>
+            <p id="para">G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관<br>
+                련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴<br>
+                봐 주시기 바랍니다.
+            </p>
+            <br>
+        </div>
+        <div class="check2">
+            <input type="checkbox" value="2" id="checkb"><span class="a">[필수]</span>개인정보 수집
+            <br>
+            <p id="para2">실명 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트,혜택 정보 수신 동<br>
+                의를 포함합니다.
+            </p>
+        </div>
+        <br>
+        <div class="log">
+            <button type="button" id="logbut" value="">로그인</button>
+        </div>
+    </div>
+    <script>
+        const c=document.getElementById("checka");
+        const d=document.getElementById("checkb");
+        const loga=document.getElementById("logbut");
+
+       
+        function checkAndEnableButton() {
+            if (c.checked && d.checked) {
+                loga.disabled = false;
+                loga.classList.add("active-button");
+            } else {
+                loga.disabled = true;
+                loga.classList.remove("active-button");
+            }
+    }
+    loga.addEventListener("click", function(){
+            alert("클릭");
+        });
+        window.onload = checkAndEnableButton;
+        c.addEventListener('change', checkAndEnableButton);
+        d.addEventListener('change', checkAndEnableButton);
+    </script>
+</body>
+</html>
