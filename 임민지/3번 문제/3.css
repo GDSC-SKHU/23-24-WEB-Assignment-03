@@ -1,0 +1,99 @@
+.container{
+  width:400px;
+  margin: 0 auto;
+}
+
+#logBox{
+  width:100%;
+  height: 30px;
+}
+
+#gdscImg{
+  width:40px;
+  height:10%;
+  margin-top:10px;
+}
+
+.topBox{
+  width:70%;
+  height:100px;
+  margin:0 auto;
+  margin-top: 30px;
+
+}
+
+.bottomBox{
+  width:70%;
+  height:100px;
+  margin:0 auto;
+  margin-top:20px;
+}
+
+.idBox, .pwdBox, .emailBox, .nameBox, .birthBox, .phoneBox{
+  width:100%;
+  height: 30%;
+  border:1px solid gray;
+}
+
+.pwdBox, .emailBox, .birthBox, .phoneBox{
+  border-top: none;
+}
+
+img{
+  width:10px;
+  height:10px;
+  margin-left:10px;
+  margin-top: 5px;
+}
+
+#calendarImg{
+  width:15px;
+  height:12px;
+  margin-left:7px;
+  margin-top: 7px;
+}
+
+
+#idInput, #pwdInput, #emailInput, #nameInput, #birthInput, #phoneInput{
+  width:80%;
+  height:90%;
+  outline:none;
+  border:none;
+  color:black;
+  font-size: 10px;
+}
+
+.loginBox{
+  width:70%;
+  height:30px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+#loginBtn{
+  color: white;
+  background-color: #03c75a;
+  text-align: center;
+  width:100%;
+  height: 100%;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+/*여기부터 잘못됨*/
+.hideTag{
+  width:100%;
+  height:30px;
+}
+
+p{
+  color:red;
+  margin:0;
+  font-size:10px;
+  visibility: hidden;
+}
+
+.hide-model{
+  display:none;
+}
+
+

@@ -1,0 +1,79 @@
+html, body{
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin:0px;
+  
+}
+.container{
+  width:100%;
+  height: 100%;
+  display:flex;
+}
+
+.navLeft{
+  width:20%;
+  height:100%;
+}
+
+.logoBigBox{
+  width:100%;
+}
+
+.navBox{
+  width:100%;
+  height:100%;
+  border: none;
+  border-right: 1px solid gray;
+}
+
+#oneBtn, #twoBtn, #threeBtn, #fourBtn, #fiveBtn  {
+  width:100%;
+  height: 80%;
+  height: 40px;
+  text-align: left;
+  background-color: white;
+  border: 1px solid gray;
+  border-right:none;
+
+}
+#twoBtn, #threeBtn, #fourBtn, #fiveBtn{
+  border-top: none;
+}
+
+.gdscImg{
+  width: 40px;
+  height: 20px;
+  margin: 10px 10px;
+}
+
+.numberBig{
+  width:80%;
+  height:100%;
+}
+
+.number{
+  width:10%;
+  height: 10%;
+  margin-left: 50%;
+  margin-top: 20%;
+  font-size: 30px;
+  color:gray;
+
+}
+
+.one, .two, .three, .four, .five{
+  display:none;
+
+}
+
+
+
+
+
+
+
+
+
+
+

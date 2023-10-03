@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1번 문제</title>
+  <link href="1.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class = "container">
+    <img src="/23-24-WEB-Assignment-03/과제/logo.png" class="logoImg">
+
+    <div class="loginBigBox">
+      <div class="loginBox">
+      
+      <div class="idBox">
+      <input type="text" id="idInput2" placeholder="아이디" onclick="borderId()">
+      <span id=person class="material-symbols-outlined">
+        person
+      </span>
+    </div>
+
+    <div class="pwdBox">
+      <input type="text" id="pwdInput2" placeholder="비밀번호" onclick="borderPwd()">
+      <span id="lock" class="material-symbols-outlined">
+          lock
+      </span>
+    </div>
+    </div>
+
+        <input type="button" class="loginBtn" value="로그인" onclick="loginCheck1()">
+
+    </div>    
+
+  <script>
+    function loginCheck1() {
+      var idInput2 = document.querySelector('#idInput2').value;
+      var pwdInput2 = document.querySelector('#pwdInput2').value;
+
+      if (idInput2 === "") {
+        alert("아이디를 입력해주세요.");
+      } else if (pwdInput2 === "") {
+        alert("비밀번호를 입력해주세요.");
+      } else {
+        location.replace('/23-24-WEB-Assignment-03/임민지/1번 문제/success.html');
+      }
+    };
+
+  </script>
+  
+</body>
+</html>
