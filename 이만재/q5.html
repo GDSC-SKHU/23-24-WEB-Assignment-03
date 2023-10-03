@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="black-bg" id="login_box">
+  <div class="black-bg">
     <div class="white-bg">
       <h4>로그인하세요</h4>
       <form action="Success.html">
@@ -52,6 +52,7 @@
   </div>
 
   <script>
+    $('.black-bg').hide();
     $('form').on('submit',(e)=>{
       if($('input[type="text"]').val()==""){
         alert('아이디를 입력해주세요');
@@ -63,10 +64,10 @@
     });
 
     $('#login').click(()=>{
-      $('.black-bg').removeClass('hide-model');
+      $('.black-bg').show();
     })
     $('#close').click(()=>{
-      $('.black-bg').addClass('hide-model');
+      $('.black-bg').hide();
     })
   
   

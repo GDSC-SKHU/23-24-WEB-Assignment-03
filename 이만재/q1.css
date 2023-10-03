@@ -28,8 +28,8 @@ input{
 
 }
 
-input:hover{
-    outline-color: #03c75a; /*input에 마우스 커서가 올라오면 input태그 창 색이 변경됨*/ 
+input:focus{
+    outline-color: #03c75a; /*input에 focus가 되면 input태그 창 색이 변경됨*/ 
 }
 
 button{

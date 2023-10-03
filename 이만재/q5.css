@@ -5,10 +5,6 @@
     display : block
   }
 
-  .hide-model{
-    display: none;
-  }
-
   .main-bg{
     padding: 100px 20px;
     background-color: lightgray;
