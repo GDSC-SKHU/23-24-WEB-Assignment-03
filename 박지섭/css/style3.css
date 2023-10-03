@@ -1,0 +1,81 @@
+.loginForm{
+    margin: 0 auto;
+    width: 460px;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+}
+#logo{
+    text-align: left;
+    padding-left: 10px;
+}
+img{
+    width: 100px;
+}
+i{
+    padding-left: 10px;
+}
+.Container{
+    width: 400px;
+    margin: 0 auto 30px auto;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+}
+.INPUT_wrap{
+    margin: 15px auto;
+    width: 90%;
+    font-size: 20px;
+    
+}
+.input-ID, .input-NAME{
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px 5px 0 0;
+}
+.input-PW, .input-BIRTH{
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-top: none;
+    border-bottom: none;
+}
+.input-EMAIL, .input-PHONE{
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-radius: 0 0 5px 5px;
+}
+.input-ID:focus-within, .input-PW:focus-within, .input-EMAIL:focus-within,
+.input-NAME:focus-within, .input-BIRTH:focus-within, .input-PHONE:focus-within{
+    outline: 1px solid #03c75a;
+}
+.input_textID, .input_textPW, .input_textEMAIL,
+.input_textNAME, .input_textBIRTH, .input_textPHONE{
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 30px;
+}
+.LOGIN_wrap{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.loginButton{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: #03c75a;
+    padding: 10px 0 10px;
+}
+.loginButton .LOGIN_text{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.errorText{
+    color: red;
+    font-size: 10px;
+    padding-left: 30px;
+}
+#idError, #pwError, #emailError, #termsError{
+    display: none;
+}

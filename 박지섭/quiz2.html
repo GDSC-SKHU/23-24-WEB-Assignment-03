@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+    <title>2번 문제</title>
+</head>
+<body>
+    <div class="Container">
+        <p id="logo">
+            <a href="quiz2.html">
+                <img src="img/GDSC.png" alt="GDSC">
+            </a>
+        </p><br>
+        <div class="Checkbox_Group">
+            <label>
+                <input type="checkbox" id="checkTerms"> <strong>[필수] </strong> 가입 약관
+            </label>
+            <div class="contents">G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐
+                주시기 바랍니다.</div>
+        </div>
+        <div class="Checkbox_Group">
+            <label>
+                <input type="checkbox" id="checkPrivacy"> <strong>[필수] </strong> 개인정보 수집
+            </label>
+            <div class="contents">실명이 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트ㆍ혜택 정보 수신 동의를 포함합니다.</div>
+        </div><br>
+            <button id="loginButton" disabled onclick="location.href='success.html'">
+                <span class="LOGIN_text">로그인</span>
+            </button>   
+    </div>
+    
+    <script>
+        const checkedTerms = document.getElementById("checkTerms");
+        const checkedPrivacy = document.getElementById("checkPrivacy");
+        const loginButton = document.getElementById("loginButton");
+
+        checkedTerms.addEventListener("change", EnableLogin);
+        checkedPrivacy.addEventListener("change", EnableLogin);
+
+        function EnableLogin() {
+            if (checkedTerms.checked && checkedPrivacy.checked) {
+                loginButton.removeAttribute("disabled");
+             } else {
+                 loginButton.setAttribute("disabled", "disabled");
+            }
+        }
+    </script>
+</body>
+</html>

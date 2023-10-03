@@ -1,0 +1,65 @@
+.loginForm{
+    margin: 0 auto;
+    width: 460px;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+}
+img{
+    width: 400px;
+    margin: auto;
+    display: block;
+}
+i{
+    padding-left: 10px;
+}
+.Container{
+    width: 400px;
+    margin: 0 auto 30px auto;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+}
+.ID_PW_wrap{
+    margin: 15px auto;
+    width: 90%;
+    font-size: 20px;
+    
+}
+.input-ID{
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px 5px 0 0;
+}
+.input-PW{
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+.input-ID:focus-within, .input-PW:focus-within{
+    outline: 1px solid #03c75a;
+}
+.input_textID, .input_textPW{
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 30px;
+    
+}
+.LOGIN_wrap{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.loginButton{
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: #03c75a;
+    padding: 10px 0 10px;
+}
+.loginButton .LOGIN_text{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}

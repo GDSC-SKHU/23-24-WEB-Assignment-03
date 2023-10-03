@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style3.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <title>3번 문제</title>
+</head>
+<body>
+    <form name="loginForm" >
+        <div class="loginForm">
+            <p id="logo">
+                <a href="quiz2.html">
+                    <img src="img/GDSC.png" alt="GDSC">
+                </a>
+            </p><br>
+            <div class="Container">
+                <div class="INPUT_wrap">
+                    <div class="input-ID">
+                        <i class="far fa-user"></i>
+                        <input type="text" placeholder="아이디" class="input_textID" name="CheckID" id="CheckID" >
+                    </div>
+                    <div class="input-PW">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="비밀번호" class="input_textPW" name="CheckPW" id="CheckPW">
+                    </div>
+                    <div class="input-EMAIL">
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="이메일" class="input_textEMAIL" name="CheckEMAIL" id="CheckEMAIL" >
+                    </div>
+                </div>
+
+                <div class="errorText">
+                    <div id="idError">*아이디:필수 정보입니다.</div>
+                    <div id="pwError">*비밀번호:필수 정보입니다.</div>
+                    <div id="emailError">*이메일:필수 정보입니다.</div>
+                    <div id="termsError">*비밀번호:대문자,소문자,특수문자(@,!,%)를 확인하세요!</div>
+                </div><br>
+
+                <div class="INPUT_wrap">
+                    <div class="input-NAME">
+                        <i class="far fa-user"></i>
+                        <input type="text" placeholder="이름" class="input_textNAME" name="CheckNAME" id="CheckNAME" >
+                    </div>
+                    <div class="input-BIRTH">
+                        <i class="far fa-id-card"></i>
+                        <input type="text" placeholder="생년월일 6자리" class="input_textBIRTH" name="CheckBIRTH" id="CheckBIRTH">
+                    </div>
+                    <div class="input-PHONE">
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" placeholder="휴대전화" class="input_textPHONE" name="CheckPHONE" id="CheckPHONE" >
+                    </div>
+                </div>
+                <div class="LOGIN_wrap">
+                    <button type="button" class="loginButton" onclick="loginCheck()">
+                        <span class="LOGIN_text">로그인</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function loginCheck(){
+            let checkID = document.getElementById("CheckID").value;
+            let checkPW = document.getElementById("CheckPW").value;
+            let checkEMAIL = document.getElementById("CheckEMAIL").value;
+
+            let idTest = false;
+            let pwTest = false;
+            let emailTest = false;
+
+            if (checkID == ""){
+                document.getElementById("idError").style.display = "block";
+                idTest = false;
+            }
+            else {
+                document.getElementById("idError").style.display = "none";
+                idTest = true;
+            }
+
+            if (checkPW == ""){
+                document.getElementById("pwError").style.display = "block";
+                pwTest = false;
+            }
+            else {
+                document.getElementById("pwError").style.display = "none";
+                pwTest = true;
+            }
+
+            if (checkEMAIL == ""){
+                document.getElementById("emailError").style.display = "block";
+                emailTest = false;
+            }
+            else {
+                document.getElementById("emailError").style.display = "none";
+                emailTest = true;
+            }
+
+            let termsTest = /^(?=.*[a-zA-Z@!%]).*$/;
+            let pwTerms = false;
+
+            if (termsTest.test(checkPW)){
+                document.getElementById("termsError").style.display = "none";
+                pwTerms = true;
+            }
+            else {
+                document.getElementById("termsError").style.display = "block";
+                pwTerms = false;
+            }
+
+            if (idTest && pwTest && emailTest && pwTerms) {
+                // document.loginForm.submit();
+                location.href = "success.html";
+            }
+        };
+    </script>
+</body>
+</html>
