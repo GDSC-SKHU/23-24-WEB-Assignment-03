@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="./3.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <img src="./GDSC.png" id="logo">
+        <div class="Container">
+            <form action="./success.html">
+                <div class="essential">
+                    <input type="text" placeholder="아이디" id="id" name="id">
+                    <input type="password" placeholder="비밀번호" id="pw">
+                    <input type="email" placeholder="이메일" id="email">
+                </div>
+                <div class="warning">
+                    <p id="warning_id">*아이디: 필수 정보입니다.</p>
+                    <p id="warning_pw">*비밀번호: 필수 정보입니다.</p>
+                    <p id="warning_email">*이메일: 필수 정보입니다.</p>
+                    <p id="warning_pw_test">*비밀번호: 대문자,소문자,특수문자(@,!,%)를 확인하세요!</p>
+                </div>
+                <div class="option">
+                    <input type="text" placeholder="이름" id="name">
+                    <input type="number" placeholder="생년월일6자리" id="birth">
+                    <input type="tel" placeholder="휴대전화" id="phone">
+                </div>
+                <button type="submit" id="login">로그인</button>
+            </div>
+        </form>
+
+        <script>
+            $("form").on("submit", function(e){
+                if($("input[type = text][name = id]").val() === ""){
+                    e.preventDefault();
+                    $("#warning_id").addClass("show");
+                }else if($("input[type = password]").val() === ""){
+                    e.preventDefault();
+                    $("#warning_pw").addClass("show");
+                }else if($("input[type = email]").val() === ""){
+                    e.preventDefault();
+                    $("#warning_email").addClass("show");
+                }else if(password === "" || !isValidPassword(password)){
+                    e.preventDefault();
+                    $("#warning_email").addClass("show");
+                }
+            });
+            function isValidPassword(password){
+                var passwordRegex = /(?=.*[a-zA-Z @!%])/;
+                return passwordRegex.test(password);
+            };
+        </script>
+    </body>
+</html>

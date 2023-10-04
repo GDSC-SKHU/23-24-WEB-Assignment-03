@@ -1,0 +1,47 @@
+#log_img{
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.Container{
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+input{
+    width: 340px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+input:focus{
+    border: 1px solid #03c75a;
+    outline: none;
+}
+.id{
+    background-image: url(./id.png);
+    background-position: 10px center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 10%;
+}
+.pw{
+    background-image: url(./pw.png);
+    background-position: 10px center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 10%;
+}
+
+#login{
+    width: 390px;
+    margin-top: 10px;
+    background-color: #03c75a;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="./2.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <img src="./GDSC.png" id="logo">
+        <form action="./success.html">
+            <div class="Container">
+                <div class="box_1">
+                    <div class="chk_1">
+                        <input type="checkbox" name="chk11" id="first_chk">
+                        <span class="chk_green">[필수]</span>
+                        <span class="chk_white"> 가입약관</span>
+                    </div>
+                    <div class="content"><p id="c_1">G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 
+                        여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 
+                        잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.</p></div>
+                </div>
+                <div class="box_2">
+                    <div class="chk_2">
+                        <input type="checkbox" name="chk22" id="second_chk">
+                        <span class="chk_green">[필수]</span>
+                        <span class="chk_white"> 개인정보 수집</span>
+                    </div>
+                    <div class="content"><p id="c_2">실명 인증된 아이디로 가입, 위치기반서비스 이용약관, 
+                        이벤트•혜택 정보 수신 동의를 포함합니다.</p></div>
+                </div>
+                <div class="box_3">
+                    <button type="submit" id="login">로그인</button>
+                </div>
+            </div>
+        </form>
+
+        <script>
+            $(".chk_1, .chk_2").on("click", function(){
+                if($("input[type = checkbox][name = chk11]").is(":checked")){
+                    if($("input[type = checkbox][name = chk22]").is(":checked")){
+                    $("#login").addClass("checked_green");
+                    };
+                };
+            });
+        </script>
+    </body>
+</html>
