@@ -1,0 +1,36 @@
+img {
+  width: 100px;
+  margin: 10px;
+}
+
+.nav {
+  width: 20%;
+  border-right: 1px solid rgba(193, 193, 193, 0.85);
+  height: 100%;
+  position: absolute;
+}
+
+.container {
+  padding: 5px;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.85);
+}
+
+.result {
+  position: fixed;
+  top: 50%;
+  right: 35%;
+  transform: translateY(-50%);
+  color: rgba(193, 193, 193, 0.85);
+  font-size: 80px;
+}
+
+.page1,
+.page2,
+.page3,
+.page4,
+.page5 {
+  padding: 15px;
+  border-bottom: 1px solid rgba(193, 193, 193, 0.85);
+  font-weight: bold;
+  cursor: pointer;
+}

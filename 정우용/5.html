@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./5.css" />
+    <title>5</title>
+  </head>
+
+  <body>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+
+        <form action="success.html">
+          <div class="my-3">
+            <input type="text" class="form-control" name="username" />
+          </div>
+
+          <div class="my-3">
+            <input type="password" class="form-control" name="password" />
+          </div>
+
+          <button type="submit" class="btn btn-primary send">전송</button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">Navbar</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <ul class="list-group">
+      <li class="list-group-item">A</li>
+      <li class="list-group-item">B</li>
+      <li class="list-group-item">C</li>
+      <li class="list-group-item">D</li>
+      <li class="list-group-item">E</li>
+    </ul>
+
+    <div class="main-bg">
+      <h4>셔츠 팝니다.</h4>
+      <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+  </body>
+
+  <script>
+    $("form").on("submit", (e) => {
+      if ($('input[type="text"]').val() == "") {
+        alert("아이디를 입력해주세요");
+        e.preventDefault();
+      } else if ($('input[type="password"]').val() == "") {
+        alert("비밀번호를 입력해주세요");
+        e.preventDefault();
+      }
+    });
+
+    $("#login").click(() => {
+      $(".black-bg").removeClass("hide-model");
+    });
+    $("#close").click(() => {
+      $(".black-bg").addClass("hide-model");
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>

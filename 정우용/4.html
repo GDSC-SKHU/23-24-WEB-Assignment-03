@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>4</title>
+    <link rel="stylesheet" href="4.css" />
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <img src="./GDSC.png" class="img-gdsc;" alt="gdsc" />
+      </div>
+      <div class="num page1">1.페이지</div>
+      <div class="num page2">2.페이지</div>
+      <div class="num page3">3.페이지</div>
+      <div class="num page4">4.페이지</div>
+      <div class="num page5">5.페이지</div>
+    </div>
+
+    <div class="result"></div>
+
+    <script>
+      const numbers = document.querySelectorAll(".num");
+      const result = document.querySelector(".result");
+
+      numbers.forEach((num) => {
+        num.addEventListener("click", () => {
+          const text = num.textContent;
+          const number = text.match(/\d+/);
+          if (number) {
+            result.textContent = number[0];
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
