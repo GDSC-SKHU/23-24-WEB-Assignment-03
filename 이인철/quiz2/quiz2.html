@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="container">
+        <form class="up_input" action="success.html">
         <div class="in_img" >
             <img src="/23-24-WEB-Assignment-03/이인철/quizimg/GDSC.png" id="gdsc">
 
@@ -31,9 +32,11 @@
         </div>
         <br>
         <div class="log">
-            <button type="button" id="logbut" value="">로그인</button>
+            <button type="submit" id="logbut" value="">로그인</button>
         </div>
+        </form>
     </div>
+
     <script>
         const c=document.getElementById("checka");
         const d=document.getElementById("checkb");
@@ -49,8 +52,8 @@
                 loga.classList.remove("active-button");
             }
     }
-    loga.addEventListener("click", function(){
-            alert("클릭");
+         loga.addEventListener("click", function(){
+            form.submit();
         });
         window.onload = checkAndEnableButton;
         c.addEventListener('change', checkAndEnableButton);
