@@ -78,12 +78,13 @@
 </style>
 
 <body>
+    <form action="success.html">
     <div class="wrap">
         <div class="logo">
           <img src = "/과제/GDSC.png">
         </div>
         <div class="contents">
-          <form action="/" method="POST" id="form__wrap">
+          <form action="" method="POST" id="form__wrap">
             <div class="terms__check__all">
               <input type="checkbox" name="checkAll" id="checkAll" />
               <label for="checkAll">
@@ -154,9 +155,11 @@
       allowPromotions: false,
     };
     
-    form.addEventListener('submit', (e) => e.preventDefault()); // 새로고침(submit) 되는 것 막음
+    
     
     checkBoxes.forEach((item) => item.addEventListener('input', toggleCheckbox));
+
+    
     
     function toggleCheckbox(e) {
       const { checked, id } = e.target;  
@@ -215,5 +218,6 @@
     });
     
     </script>
+  </form>
 </body>
 </html>
