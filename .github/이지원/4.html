@@ -13,14 +13,8 @@
         }
 
         .container {
-            display: flex;
             width: 100%;
-        }
-
-        .sidebar {
             flex: 1;
-            background-color: #f0f0f0;
-            padding: 20px;
         }
 
         .logo img {
@@ -32,7 +26,6 @@
         .pages {
             flex: 3;
             display: flex;
-            
             align-items: center;
             padding: 20px;
             justify-content: center;
@@ -44,7 +37,6 @@
             background-color: #f9f9f9;
             border: 1px solid #ccc;
             display: flex;
-            justify-content: center;
             align-items: center;
             cursor: pointer;
         }
@@ -66,8 +58,7 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
+    <div class="container">     
             <div class="logo">
                 <img src="/과제/GDSC.png" alt="Logo">
             </div>
@@ -81,7 +72,6 @@
             <div class="pageNumberContainer">
                 <span id="pageNumber">1</span>
             </div>
-        </div>
     </div>
 
     <script>
