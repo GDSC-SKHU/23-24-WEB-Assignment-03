@@ -124,6 +124,11 @@
   align-items: center;
   justify-content: center;
 }
+.signin-container {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
 
 #modalOpenButton,
 #modalCloseButton {
