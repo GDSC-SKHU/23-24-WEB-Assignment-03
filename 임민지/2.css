@@ -1,0 +1,60 @@
+.container{
+  margin: 0 auto;
+  background-color: #424242;
+  width:500px;
+
+}
+
+img{
+  width: 70px;
+  height:20px;
+  margin-left:10px;
+}
+
+.check1, .check2{
+  color:white;
+  margin: 0 auto;
+  margin-top:20px;
+}
+
+.check1 span{
+  color:#03c75a;
+}
+
+.check2 span{
+  color:#03c75a;
+}
+
+.explain1, .explain2{
+  width:80%;
+  border: 1px solid gray;
+  color:gray;
+  margin: 0 auto;
+  font-size: 11px;
+}
+
+input{
+  margin-bottom:20px;
+  margin-left: 50px;
+}
+
+.check2{
+  margin-bottom:40px;
+}
+
+#loginBtn{
+  width: 85%;
+  height: 40px;
+  margin: 35px;
+  background-color: gray;
+  color:white;
+  border-radius: 5px;
+  margin-bottom:130px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#loginBtn.active{
+  background-color: #03c75a;
+}
+

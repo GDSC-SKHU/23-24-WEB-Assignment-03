@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2번문제</title>
+  <link href="2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+  <div class="logo">
+    <img src="../과제/GDSC.png">
+  </div>
+  <div class="check1">
+    <input type="checkbox" id="join"/><span>[필수]</span> 가입약관
+  </div>
+  <div class="explain1">
+    <p>G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다. </p>
+  </div>
+
+  <div class="check2">
+    <input type="checkbox" id="individual"/><span>[필수]</span> 개인정보 수집
+    <div class="explain2">
+      <p>실명 인증되 아이디로 가입, 위치기반서비스 이용약관, 이벤트,혜택 정보 수신 동의를 포합합니다.</p>
+    </div>
+  </div>
+
+  <div class="login">
+    <button id="loginBtn" disabled onclick="">로그인</button>
+  </div>
+</div>
+
+<script>
+  const join = document.getElementById('join');
+  const individual = document.getElementById('individual');
+  const loginBtn = document.getElementById('loginBtn');
+
+  join.addEventListener('change', activation);
+  individual.addEventListener('change', activation);
+
+  function activation(){
+    if(join.checked && individual.checked){
+      loginBtn.removeAttribute('disabled');
+      loginBtn.classList.add('active');
+      loginBtn.onclick=function(){
+      location.href = 'success.html';
+      }
+    }
+    else{
+      loginBtn.setAttribute('disabled', 'true');
+      loginBtn.classList.remove('active');
+    }
+  }
+
+
+</script>
+  
+</body>
+</html>

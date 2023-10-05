@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4번 문제</title>
+  <link href="4.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!--네비게이션-->
+    <nav class="navLeft">
+      <div class="logoBigBox">
+        <img src="../과제/GDSC.png" class="gdscImg">
+      </div>
+      <div class="navBox">
+        <button type="text" id="oneBtn" >1페이지</button>
+        <button type="text" id="twoBtn">2페이지</button>
+        <button type="text" id="threeBtn">3페이지</button>
+        <button type="text" id="fourBtn">4페이지</button>
+        <button type="text" id="fiveBtn">5페이지</button>
+      </div>
+    </nav>
+
+    <div class="numberBig" >
+      <div class="number">
+      <p class="one">1</p>
+      <p class="two">2</p>
+      <p class="three">3</p>
+      <p class="four">4</p>
+      <p class="five">5</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    var oneBtn = document.getElementById('oneBtn');
+    var one = document.querySelector('.one');
+    var twoBtn = document.getElementById('twoBtn');
+    var two = document.querySelector('.two');
+    var threeBtn = document.getElementById('threeBtn');
+    var three = document.querySelector('.three');
+    var fourBtn = document.getElementById('fourBtn');
+    var four = document.querySelector('.four');
+    var fiveBtn = document.getElementById('fiveBtn');
+    var five = document.querySelector('.five');
+
+
+    oneBtn.onclick = function() {
+    one.style.display = 'block';
+    two.style.display = 'none';
+    three.style.display = 'none';
+    four.style.display = 'none';
+    five.style.display = 'none';
+};
+
+    twoBtn.onclick = function() {
+    two.style.display = 'block';
+    one.style.display = 'none';
+    three.style.display = 'none';
+    four.style.display = 'none';
+    five.style.display = 'none';
+};
+
+    threeBtn.onclick = function() {
+    three.style.display = 'block';
+    one.style.display = 'none';
+    two.style.display = 'none';
+    four.style.display = 'none';
+    five.style.display = 'none';
+
+};
+    fourBtn.onclick = function() {
+    four.style.display = 'block';
+    one.style.display = 'none';
+    three.style.display = 'none';
+    two.style.display = 'none';
+    five.style.display = 'none';
+
+};
+    fiveBtn.onclick = function() {
+    five.style.display = 'block';
+    one.style.display = 'none';
+    three.style.display = 'none';
+    four.style.display = 'none';
+    two.style.display = 'none';
+
+};
+  </script>
+  
+</body>
+</html>

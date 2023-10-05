@@ -1,0 +1,88 @@
+.container{
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.logoImg{
+  width:90%;
+  height: 200px;
+  margin-left: 20px;
+}
+
+.loginBigBox{
+  width:100%;
+  height:180px;
+  border: 2px solid lightgray;
+
+}
+
+.loginBox{
+  width:85%;
+  height:45%;
+  margin-left: 29px;
+  margin-top: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.idBox, .pwdBox{
+  width:100%;
+  height:50%;
+  border: none;
+}
+
+#idInput2{
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  border-bottom:2px solid lightgray;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding-left:30px;
+  background-color: none;
+
+}
+
+#pwdInput2{
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  border:none;
+  outline: none;
+  padding-left:30px
+}
+
+#idInput2:focus{
+  border: 2px solid #03c75a;
+}
+
+#pwdInput2:focus{
+  border: 2px solid #03c75a;
+}
+
+#person{
+  position: absolute;
+  margin-left: -335px;
+  margin-top: 10px;
+}
+
+#lock{
+  position: absolute;
+  margin-left: -335px;
+  margin-top: 10px;
+}
+
+.loginBtn{
+  width:85%;
+  height: 40px;
+  background-color: #03c75a;
+  border: 1px solid #03c75a;
+  color: white;
+  border-radius: 5px;
+  margin-left:30px;
+  margin-top: 30px;
+}
+

@@ -1,0 +1,138 @@
+.container{
+  width:400px;
+  margin: 0 auto;
+}
+
+#logBox{
+  width:100%;
+  height: 30px;
+}
+
+#gdscImg{
+  width: 50px;
+  height:20%;
+  margin-top:10px;
+}
+
+.topBox{
+  width:70%;
+  height:100px;
+  margin:0 auto;
+  margin-top: 30px;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.idBox,.pwdBox{
+  width:100%;
+  height:32%;
+  border-bottom: 2px solid lightgrey;
+}
+
+.emailBox{
+  width:100%;
+  height:32%;
+  border:none;
+}
+
+#idInput, #pwdInput{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding-left: 30px;
+  outline: none;
+}
+
+#emailInput{
+  width: 100%;
+  height: 99%;
+  box-sizing: border-box;
+  border: none;
+  padding-left: 30px;
+  outline: none;
+}
+
+#person, #lock, #emailIcon{
+  position: absolute;
+  margin-left: -275px;
+  margin-top: 5px;
+}
+
+.bottomBox{
+  width:70%;
+  height:100px;
+  margin:0 auto;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.nameBox,.birthBox{
+  width:100%;
+  height:32%;
+  border-bottom: 2px solid lightgrey;
+}
+
+.phoneBox{
+  width:100%;
+  height:32%;
+  border:none;
+}
+
+#nameInput, #birthInput{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding-left: 30px;
+}
+
+#phoneInput{
+  width: 100%;
+  height: 99%;
+  box-sizing: border-box;
+  border: none;
+  padding-left: 30px;
+}
+
+#personIcon, #birthIcon, #phoneIcon{
+  position: absolute;
+  margin-left: -275px;
+  margin-top: 5px;
+}
+
+#loginBtn{
+  color: white;
+  background-color: #03c75a;
+  text-align: center;
+  width:70%;
+  height: 35px;
+  border: 1px solid green;
+  border-radius: 5px;
+  margin-left: 60px;
+  font-size: 15px;
+}
+
+.hideTag{
+  width:100%;
+  height:30px;
+}
+
+p{
+  color:red;
+  margin:0;
+  font-size:10px;
+  visibility: hidden;
+}
+
+.hide-model{
+  display:none;
+}
+
+#idInput:focus, #pwdInput:focus, #emailInput:focus, #nameInput:focus, #birthInput:focus, #phoneInput:focus{
+  border: 2px solid #03c75a;
+}
+
+
