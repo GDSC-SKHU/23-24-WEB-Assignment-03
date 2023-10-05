@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style5.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>5번 문제</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <h2><a href="quiz5.html">Navbar</a></h2>
+            <div class="menuButton" id="menuButton">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menuItems" id="menuItems">
+                <a href="quiz1.html">Quiz 1</a>
+                <a href="quiz2.html">Quiz 2</a>
+                <a href="quiz3.html">Quiz 3</a>
+                <a href="quiz4.html">Quiz 4</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <p id="context-text">살려주세요.</p>
+        <button id="loginButton">로그인</button>
+    </div>
+    
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <span style="font-size: 20px; font-weight: bold;">로그인하세요</span>
+                <span class="xButton" id="xButton"><i class="fas fa-times"></i></span>
+            </div>
+            <form id="loginForm">
+                <div class="ID_PW_wrap">
+                    <input type="text" placeholder="아이디" class="input_textID" id="CheckID" required>
+                </div>
+                <div class="ID_PW_wrap">
+                    <input type="password" placeholder="비밀번호" class="input_textPW" id="CheckPW" required>
+                </div>
+                <div class="LOGIN_wrap">
+                    <button type="button" class="submitButton" id="submitButton" onclick="loginCheck()">로그인</button>
+                    <button type="button" class="closeButton" id="closeButton">닫기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const menuItems = document.getElementById("menuItems");
+        const loginButton = document.getElementById("loginButton");
+        const loginPopup = document.getElementById("loginPopup");
+        const xButton = document.getElementById("xButton");
+        const submitButton = document.getElementById("submitButton");
+        const closeButton = document.getElementById("closeButton");
+
+        xButton.addEventListener("click", () => {
+            loginPopup.style.display = "none";
+        });
+
+        loginButton.addEventListener("click", () => {
+            loginPopup.style.display = "block";
+        });
+
+        menuButton.addEventListener("click", () => {
+            if (menuItems.style.display == "block") {
+                menuItems.style.display = "none";
+            }
+            else{
+                menuItems.style.display = "block";
+            }
+        });
+
+        closeButton.addEventListener("click", () => {
+            loginPopup.style.display = "none";
+        });
+
+        function loginCheck(){
+        let checkID = document.getElementById("CheckID").value;
+        let checkPW = document.getElementById("CheckPW").value;
+
+        if (checkID == ""){
+            alert("아이디를 입력해주세요.");
+            return false;
+        }
+        else if (checkPW == ""){
+            alert("패스워드를 입력해주세요.");
+            return false;
+        }
+        else {
+            // document.loginForm.submit();
+            location.href = "success.html";
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style4.css" rel="stylesheet" type="text/css">
+    <title>4번 문제</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="img/GDSC.png" width="80px"></div><hr>
+        <div class="page" id="page1">1.페이지</div><hr>
+        <div class="page" id="page2">2.페이지</div><hr>
+        <div class="page" id="page3">3.페이지</div><hr>
+        <div class="page" id="page4">4.페이지</div><hr>
+        <div class="page" id="page5">5.페이지</div><hr>
+    </nav>
+    <div class="content">
+        <div id="content1" class="hidden">1</div>
+        <div id="content2" class="hidden">2</div>
+        <div id="content3" class="hidden">3</div>
+        <div id="content4" class="hidden">4</div>
+        <div id="content5" class="hidden">5</div>
+    </div>
+    
+    <script>
+        // document.getElementById("page1").addEventListener("click", () => {
+        //     clickChange(1);
+        // });
+        // document.getElementById("page2").addEventListener("click", () => {
+        //     clickChange(2);
+        // });
+        // document.getElementById("page3").addEventListener("click", () => {
+        //     clickChange(3);
+        // });
+        // document.getElementById("page4").addEventListener("click", () => {
+        //     clickChange(4);
+        // });
+        // document.getElementById("page5").addEventListener("click", () => {
+        //     clickChange(5);
+        // });
+        
+    
+    let elems = document.getElementsByClassName('page');
+
+    for (let i = 0; i < elems.length; i++) {
+        let elem = elems[i];
+        elem.addEventListener('click', () => {
+            clickChange(i+1);
+        });
+    }
+
+    function clickChange(clickPage) {
+
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById("content" + i).classList.add("hidden");
+        }
+
+        document.getElementById("content" + clickPage).classList.remove("hidden");
+    }
+
+    </script>
+</body>
+</html>

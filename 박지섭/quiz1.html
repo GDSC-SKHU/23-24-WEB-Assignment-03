@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <title>1번 문제</title>
+</head>
+<body>
+<form name="loginForm" >
+    <div class="loginForm">
+        <a href="quiz1.html">
+            <img src="img/logo.png" alt="로고">
+        </a>
+        <div class="Container">
+            <div class="ID_PW_wrap">
+                <div class="input-ID">
+                    <i class="far fa-user"></i>
+                    <input type="text" placeholder="아이디" class="input_textID" id="CheckID" >
+                </div>
+                <div class="input-PW">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="비밀번호" class="input_textPW" id="CheckPW">
+                </div>
+            </div>
+            <div class="LOGIN_wrap">
+                <button type="button" class="loginButton" onclick="loginCheck()">
+                    <span class="LOGIN_text">로그인</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    function loginCheck(){
+        let checkID = document.getElementById("CheckID").value;
+        let checkPW = document.getElementById("CheckPW").value;
+        if (checkID == ""){
+            alert("아이디를 입력해주세요.");
+            return false;
+        }
+        else if (checkPW == ""){
+            alert("패스워드를 입력해주세요.");
+            return false;
+        }
+        else {
+            // document.loginForm.submit();
+            location.href = "success.html";
+        }
+    };
+</script>
+</body>
+</html>
