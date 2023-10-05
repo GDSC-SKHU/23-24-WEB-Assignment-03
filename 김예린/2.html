@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2번</title>
+    <style>
+         *{
+            background-color: rgb(56, 55, 55); color:white;
+         }
+         input{ margin-top: 5%; margin-bottom: 5%;}
+        .text{ border: 1px solid lightgray; border-radius: 5px ; padding: 10px;}
+        .container{ width: 500px;     
+            margin:auto; position:relative; }
+        img{width: 100px; }
+        span{ color: green; font-weight: bold;}
+        button{  border: none; border-radius: 5px; padding: 10px; margin-top: 5%;
+              width: 100%;  background-color: rgb(105, 105, 105);  color:white;             
+            
+        }
+        button:hover{
+            cursor: pointer;  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="homebox">
+            <a href="index.html" class="logo"><img src="./GDSC.png" alt="logoimg"></a>
+        </div>
+    </header>
+ 
+   
+    <div class="container">
+        <form  action="success.html">
+             
+            <input type="checkbox" id="check1" required> <span> [필수]</span> 가입약관
+            <div class="text"> 
+                G서비스를 이용하시거나 서비스 회원으로 가입하실 경우
+                여러분은 본 약관 및 관련 운영 정책을 확인하거나
+                동의하게 되므로, 잠시 시간을 내시어 주의깊게 살펴봐 주시기 바랍니다.
+            </div>
+            <input type="checkbox" id="check2" required> <span> [필수]</span> 개인정보 수집
+            <div class="text">
+                실명 인증된 아이디로 가입, 위치기반 서비스 이용약관 이벤트 혜택정보 수신 동의를 포함합니다.
+            </div>
+               
+                <button type="submit" id="loginBtn" >로그인</button>
+            
+        </form>
+    </div>
+    <script>
+          const check1 = document.getElementById('check1');
+          const check2 = document.getElementById('check2');
+          const loginButton = document.getElementById('loginBtn');
+        
+          check1.addEventListener('change', btn);
+          check2.addEventListener('change', btn);
+       
+         function btn() {
+                if (check1.checked && check2.checked) {
+                    
+                    loginButton.removeAttribute('disabled');
+                    loginButton.style.backgroundColor = '#03c75a';
+                
+                } else {
+                      
+                    loginButton.setAttribute('disabled', 'disabled');// 이 방법을 쓰면 다음 페이지로 넘어감              
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+<style>
+ * {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+  }   
+  ul{list-style:none;}
+  li { list-style: none; }
+  a { text-decoration: none; }   
+ 
+  aside {   
+    position: fixed;
+    top: 10px;
+    bottom: 0;
+    width: 20%; 
+    padding-top: 25px;
+    border: 1px solid lightgray; 
+  }
+  aside > ul> li {
+    border: 1px solid lightgray;
+  }
+  aside > ul > li > a {
+    display: block;
+    color: black;
+    padding:10px 0  10px 20px;
+  }  
+  aside > ul >li> a:hover{
+    background-color: lightgray;
+  }
+ 
+  section {  
+    margin-left: 200px; 
+  }    
+  #wrap{padding:15px; letter-spacing:-0.5px;}
+  .tab_menu{position:relative;}
+  .tab_menu .list{overflow:hidden;}
+  .tab_menu .list li.is_on .btn{font-weight:bold; color:black;}
+  .tab_menu .cont_area .cont{
+    left:200px;  text-align: center; margin-top: 300px;
+    display:none;  
+    }  
+ h1{
+    color: gray; font-size: 50px;
+ }
+</style>
+</head>
+<body>
+    <div id="wrap">
+      <div class="tab_menu">
+      <aside>
+        <img src="./GDSC.png" alt="logoimg" style="width: 100px; margin: 10px;">
+        <ul class="list">
+          <li class="is_on"><a href="#one" class="btn">1페이지</a></li>
+          <li><a href="#two" class="btn">2페이지</a></li>
+          <li><a href="#three" class="btn">3페이지</a></li>
+          <li><a href="#four" class="btn">4페이지</a></li>
+          <li><a href="#five" class="btn">5페이지</a></li>
+        </ul>
+      </aside>
+      <section>
+        <div class="cont_area">
+        <div id="one" class ="cont" style="display:block;">
+        <article id="one">
+           
+          <h1>1</h1>
+          
+        </article>    
+        </div>
+        <div id="two" class="cont">    
+        <article id="two">
+           <h1>2</h1>
+        </article>
+        </div>
+        <div id="three" class="cont">    
+            <article id="three">
+               <h1>3</h1>
+            </article>
+        </div>
+        <div id="four" class="cont">    
+            <article id="four">
+                   <h1>4</h1>
+            </article>
+        </div>
+        <div id="five" class="cont">    
+            <article id="five">
+                       <h1>5</h1>
+            </article>
+        </div>           
+        </div><!-- count_area div-->
+          </section>
+    </div> <!-- tab div-->
+           
+  </div> <!--wrap div--> 
+  <script>
+    const tabList = document.querySelectorAll('.tab_menu .list li');
+    const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
+    let activeCont = ''; 
+  
+    for(let i = 0; i < tabList.length; i++){
+      tabList[i].querySelector('.btn').addEventListener('click', function(e){
+        e.preventDefault();
+        for(let j = 0; j < tabList.length; j++){
+         
+          tabList[j].classList.remove('is_on');  
+        
+          contents[j].style.display = 'none';
+        }  
+        
+        this.parentNode.classList.add('is_on');  
+      
+        activeCont = this.getAttribute('href');
+        document.querySelector(activeCont).style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>
