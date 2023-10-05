@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/bb0c0e63a5.js" crossorigin="anonymous"></script>
+
+    <style>
+        div.container {
+            margin: 30px auto;
+            padding: 20px 28px;
+            display: block;
+            flex-direction: column;
+            width: 400px;
+            background-color: #fff;
+            margin-top: 0;
+            box-shadow: 0 5px 8px 0 rgba(68, 68, 68, .04);
+        }
+
+        .full {
+            width: 500px;
+            margin: 30px auto;
+        }
+
+        .id_pw_wrap {
+            border: 1px solid #c6c6c6;
+            border-radius: 5px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .id_pw_wrap .input_row:nth-child(1) {
+            border-radius: 5px 5px 0 0;
+            border-bottom: 1px solid #c6c6c6;
+            box-shadow: none;
+        }
+
+        .id_pw_wrap .input_row:nth-child(2) {
+            border-top: 1px solid #c6c6c6;
+            border-bottom: 1px solid #c6c6c6;
+            box-shadow: none;
+        }
+
+        .id_pw_wrap .input_row:nth-child(3) {
+            border-radius: 0 0 5px 5px;
+            border-top: 1px solid #c6c6c6;
+            box-shadow: none;
+        }
+
+        .id_pw_wrap .input_row {
+            display: flex;
+            width: 100%;
+            padding: 14px 17px 13px;
+            box-sizing: border-box;
+        }
+
+        .id_pw_wrap .input_row .input_text {
+            flex-grow: 1;
+            border: none;
+        }
+
+        input {
+            appearance: none;
+            outline: 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn_login {
+            width: 100%;
+            padding: 13px 0 13px;
+            border-radius: 5px;
+            border: 1px solid #c6c6c6;
+            background-color: #03c75a;
+            box-sizing: border-box;
+            margin-top: 40px;
+        }
+
+        .btn_login span {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        img {
+            width: 100px;
+            height: 30px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: top;
+
+            margin-top: 0px;
+            margin-left: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid black;
+            margin: 0;
+        }
+
+        .error {
+            color: red;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full">
+        <hr>
+        <h1><img src="../과제/GDSC.png"></h1>
+        <div class="container">
+            <div class="id_pw_wrap">
+                <div class="input_row">
+                    <span class="fa-regular fa-user"></span>
+                    <input type="text" id="idInput" name="id" placeholder="아이디" class="input_text">
+                </div>
+                <div class="input_row">
+                    <span class="fa-solid fa-lock"></span>
+                    <input type="password" id="pwInput" name="pw" placeholder="비밀번호" class="input_text">
+                </div>
+                <div class="input_row">
+
+                    <span class="fa-solid fa-envelope"></span>
+                    <input type="text" id="emailInput" name="email" placeholder="이메일" class="input_text">
+                </div>
+            </div>
+
+            <div class="error" id="idError" style="display: none;">*아이디:필수 정보입니다.</div>
+            <div class="error" id="pwError1" style="display: none;">*비밀번호:필수 정보입니다.</div>
+            <div class="error" id="emailError" style="display: none;">*이메일:필수 정보입니다.</div>
+            <div class="error" id="pwError2" style="display: none;">*비밀번호:대문자,소문자,특수문자(@,!,%)를 확인하세요!</div>
+
+            <div class="id_pw_wrap">
+                <div class="input_row">
+                    <span class="fa-regular fa-user"></span>
+                    <input type="text" id="name" name="name" placeholder="이름" class="input_text">
+                </div>
+                <div class="input_row">
+                    <span class="fa-solid fa-calendar-days"></span>
+                    <input type="text" id="day" name="day" placeholder="생년월일6자리" class="input_text">
+                </div>
+                <div class="input_row">
+                    <span class="fa-solid fa-phone"></span>
+                    <input type="text" id="phone" name="phone" placeholder="휴대전화" class="input_text">
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn_login" id="log.login"
+                    onclick="loginSuccess()"><span>로그인</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginSuccess() {
+            const idInput = document.getElementById("idInput").value;
+            const pwInput = document.getElementById("pwInput").value;
+            const emailInput = document.getElementById("emailInput").value;
+
+            if (idInput === "") {
+                document.getElementById("idError").style.display = "block";
+            } else {
+                document.getElementById("idError").style.display = "none";
+            }
+
+            if (pwInput === "") {
+                document.getElementById("pwError1").style.display = "block";
+            } else {
+                document.getElementById("pwError1").style.display = "none";
+            }
+
+            let upperCase = false;
+            let lowerCase = false;
+            let symbols = false;
+
+            for (let i = 0; i < pwInput.length; i++) {
+                const char = pwInput.charAt(i);
+
+                if (char >= 'A' && char <= 'Z') {
+                    upperCase = true;
+                } else if (char >= 'a' && char <= 'z') {
+                    lowerCase = true;
+                } else if (char === '@' || char === '!' || char === '%') {
+                    symbols = true;
+                }
+            }
+
+            if (!(upperCase || lowerCase || symbols)) {
+                document.getElementById("pwError2").style.display = "block";
+            } else {
+                document.getElementById("pwError2").style.display = "none";
+            }
+
+            if (emailInput === "") {
+                document.getElementById("emailError").style.display = "block";
+            } else {
+                document.getElementById("emailError").style.display = "none";
+            }
+
+            if (idInput !== "" && pwInput !== "" && emailInput !== "" && (upperCase || lowerCase || symbols)) {
+                let value = "success.html";
+                location.replace(value);
+            }
+        }
+    </script>
+</body>
+
+</html>

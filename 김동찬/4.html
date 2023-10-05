@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-container {
+            width: 20%;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            left: 0;
+            height: 100%;
+            border-right: 1px solid #c6c6c6;
+        }
+
+        .nav-item {
+            padding: 15px;
+            border-bottom: 1px solid #c6c6c6;
+            cursor: pointer;
+        }
+
+
+
+        img {
+            width: 90px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        div.page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #c6c6c6;
+            font-size: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-container">
+        <ul>
+            <li><img src="../과제/GDSC.png"></li>
+            <li class="nav-item" onclick="numberChange(1)" style="border-top: 1px solid #c6c6c6;">1.페이지</li>
+            <li class="nav-item" onclick="numberChange(2)">2.페이지</li>
+            <li class="nav-item" onclick="numberChange(3)">3.페이지</li>
+            <li class="nav-item" onclick="numberChange(4)">4.페이지</li>
+            <li class="nav-item" onclick="numberChange(5)">5.페이지</li>
+        </ul>
+    </nav>
+    <div class="page" id="page">1</div>
+
+    <script>
+        function numberChange(number) {
+            document.getElementById("page").textContent = number;
+        }
+    </script>
+</body>
+
+</html>

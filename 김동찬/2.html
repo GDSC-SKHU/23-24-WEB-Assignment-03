@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div.container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .full {
+            width: 600px;
+            height: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #403e3e;
+        }
+
+        img {
+            padding: 0px 0px 25px 20px;
+            width: 100px;
+            height: 30px;
+        }
+
+        h1 {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .btn_submit_wrap {
+            flex: none;
+            padding: 20px;
+            width: 460px;
+        }
+
+        .btn_login {
+            width: 100%;
+            padding: 14px 0;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, .05);
+            background: #09aa5c;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+            color: #fff;
+        }
+
+        .btn_login:disabled {
+            background: #c6c6c6;
+        }
+
+        .check_terms {
+            display: flex;
+            padding-left: 32px;
+            font-size: 18px;
+        }
+
+
+        input {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        strong {
+            color: #09aa5c;
+        }
+
+        .text_wrap {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: bold;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        .terms_box {
+            box-sizing: border-box;
+            margin: 10px 30px 30px 30px;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #d6d6d6;
+            color: #c6c6c6;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full">
+        <div class="container">
+            <h1><img src="../과제/GDSC.png"></h1>
+            <div class="content">
+                <div class="form">
+                    <ul class="terms_list">
+                        <li class="terms_item">
+                            <div class="check_terms">
+                                <input type="checkbox" id="input_checkbox">
+                                <strong>[필수]</strong>&nbsp;
+                                <div class="text_wrap">가입약관</div>
+                            </div>
+                            <div class="terms_box">
+                                G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐
+                                주시기 바랍니다.
+                            </div>
+                        </li>
+
+                        <li class="terms_item">
+                            <div class="check_terms">
+                                <input type="checkbox" id="input_checkbox">
+                                <strong>[필수]</strong>&nbsp;
+                                <div class="text_wrap">개인정보 수집</div>
+                            </div>
+                            <div class="terms_box">
+                                실명이 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트ㆍ혜택 정보 수신 동의를 포함합니다.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_submit_wrap">
+                <button type="button" class="btn_login" disabled="disabled">로그인</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const loginButton = document.querySelector('.btn_login');
+        const checkboxes = document.querySelectorAll('input');
+
+        function checkStatus() {
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (!checkboxes[i].checked) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function buttonState() {
+            let allChecked = checkStatus();
+
+            if (allChecked) {
+                loginButton.removeAttribute('disabled');
+            } else {
+                loginButton.setAttribute('disabled', 'disabled');
+            }
+        }
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener("click", function () {
+                buttonState();
+            });
+        }
+
+        loginButton.addEventListener("click", function () {
+            let allChecked = checkStatus();
+            if (allChecked) {
+                let value = "success.html";
+                location.replace(value);
+            }
+        });
+
+    </script>
+
+</body>
+
+
+</html>
