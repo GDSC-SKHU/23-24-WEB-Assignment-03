@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/박예은/2.css">
+    <title>q2</title>
+</head>
+<body>
+    <div class="container">
+        <img src="/박예은/GDSC.png" alt="gdsc" class="img">
+        <div class="main">
+            <div class="signin">
+                <input type="checkbox" class="num1"><span class="essen">[필수]</span><span class="txt"> 가입약관</span>
+                <div class="s_box">G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.</div>
+            </div>
+            <div class="privacy">
+                <input type="checkbox" class="num2"><span class="essen">[필수]</span><span class="txt"> 개인정보 수집</span>
+                <div class="p_box">실명 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트, 혜택 정보 수신 동의를 포함합니다.</div>
+            </div>
+            <button class="login">로그인</button>
+        </div>
+    </div>  
+    <script>
+
+        const check1 = document.querySelector(".num1");
+        const check2 = document.querySelector(".num2");
+
+        const loginButton = document.querySelector(".login");
+
+        check1.addEventListener("change", updateButton);
+        check2.addEventListener("change", updateButton);
+
+        function updateButton() {
+
+            if (check1.checked && check2.checked) {
+
+                loginButton.style.backgroundColor = "#03c75a";
+                loginButton.addEventListener("click", successPage);
+
+            } 
+            else {
+
+                loginButton.style.backgroundColor = "rgba(121, 121, 121, 0.85)";
+
+            }
+        }
+
+        function successPage() {
+
+            window.location.href = "5_success.html";
+
+        }
+        
+    </script>
+</body>
+</html>

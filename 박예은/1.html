@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/박예은/1.css">
+    <title>q1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main-img"><img src="/박예은/logo.png" alt="로고" class="main-img">
+            <div class="main-login">
+                <div class="idpw">
+                    <div class="idbox">
+                        <input type="text" class="idinput" placeholder="아이디" id="username">
+                    </div>
+                    <div class="pwbox">
+                        <input type="password" class="pwinput" placeholder="비밀번호"  id="password">
+                    </div>
+                        <button class="btn" id="login-button">로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+
+            var loginButton = document.getElementById("login-button");
+            var usernameField = document.getElementById("username");
+            var passwordField = document.getElementById("password");
+
+            loginButton.addEventListener("click", function () {
+
+                var username = usernameField.value;
+                var password = passwordField.value;
+
+                if (username === "" && password === "") {
+
+                    alert("아이디와 비밀번호를 입력하세요.");
+
+                } 
+                else if (username === "") {
+
+                    alert("아이디를 입력하세요.");
+
+                } 
+                else if (password === "") {
+
+                    alert("비밀번호를 입력하세요.");
+
+                } 
+                else {
+
+                    window.location.href = "5_success.html";
+
+                }
+                
+            });
+            
+        });
+    </script>
+</body>
+</html>
