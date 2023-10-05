@@ -1,0 +1,66 @@
+#logo{
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 0 0 0 20px;
+}
+.Container{
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+.essential{
+    padding: 15px;
+}
+.option{
+    padding: 15px;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-position: 10px center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-left: 10%;
+    color: lightgray;
+}
+#id{
+    background-image: url(./id.png);
+}
+#pw{
+    background-image: url(./pw.png);
+}
+#email{
+    background-image: url(./email.png);
+}
+#name{
+    background-image: url(./id.png);
+}
+#birth{
+    background-image: url(./birth.png);
+}
+#phone{
+    background-image: url(./phone.png);
+}
+#login{
+    width: 350px;
+    margin: 10px;
+    color: white;
+    border: solid;
+    border-radius: 10px;
+    background-color: #03c75a;
+    padding: 10px;
+}
+
+p{
+    font-size: 10px;
+    color: red;
+    padding-left: 15px;
+    margin: 0px;
+    display: none;
+}
+.show{
+    display: block;
+}
