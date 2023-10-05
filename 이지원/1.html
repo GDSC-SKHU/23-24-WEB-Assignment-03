@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+</head>
+<style>
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        width: calc(100% - 20px);
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    input:focus {
+        border-color: #03c75a;
+    }
+
+    .blank {
+        width: 400px;
+        height: 35px;
+       
+        background-color: #03c75a;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+</style>
+<body>
+    <br>
+    <br>
+    <br>
+    <form action="success.html" class="container">
+        <div class="logo">
+            <img src="/과제/GDSC.png">
+        </div>
+        <div class="input-container">
+            <input type="text" name="id" id="id1" required placeholder="아이디"><br>
+        </div>
+        <div class="input-container">
+            <input type="password" name="pw" id="pw" required placeholder="비밀번호"><br>
+        </div>
+        <input type="submit" class="blank" value="로그인" id="subm"> 
+    </form> 
+</body>
+</html>

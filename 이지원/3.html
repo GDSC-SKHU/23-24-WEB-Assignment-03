@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+
+
+<style>
+    .container {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    label {
+        display: none;
+    }
+
+    input {
+        width: calc(100% - 20px);
+        padding: 8px;
+    }
+
+    .blank {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        background-color: #03c75a;
+        font-size: 16px;
+        border: none;
+        color: #fff;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 50px;
+    }
+
+    input:focus {
+    border: 2px solid green !important;
+    outline: none !important;
+}
+
+
+</style>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <form action="success.html">
+    <div class="logo">
+        <img src = "/과제/GDSC.png">
+    </div>
+    <div id="pwMsg" class="container">
+        <input type="text" name="id" id="id1" required placeholder="아이디"><br>
+        <input type="password" name="pw" id="pw"  required placeholder="비밀번호"><br>
+        <input type="password" name="pw2" id="pw2" required placeholder="비밀번호 확인"><br>
+        <input type="email" name="email" id="email" required placeholder="이메일"><br>
+        <br>
+        <br>
+        <input type="text" name="name" id="name" required placeholder="이름"><br>
+        <input type="text" name="birth" id="birth" required pattern="\d{6}" title="6자리 숫자로 입력하세요" placeholder="생년월일 6자리"><br>
+        <input type="tel" name="phone" id="phone" required pattern="\d{10,11}" required placeholder="휴대전화"><br>
+        <input type="submit" class="blank" value="회원가입" id="subm"> 
+    </div>
+    </form> 
+
+    <script>
+        window.onload = function () {
+    
+            var id1 = document.querySelector('#id1');
+            var pwMsg = document.querySelector('#pwMsg');
+            var pw = document.querySelector('#pw');
+            var pw2 = document.querySelector('#pw2');
+            var email = document.querySelector('#email');
+            var name = document.querySelector('#name');
+            var birth = document.querySelector('#birth');
+            var phone = document.querySelector('#phone');
+    
+            pwMsg.style.fontWeight = "bold";
+            var regId = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/;
+            var regPw = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,15}$/;
+            var regBirth = /^\d{6}$/;
+            var regPhone = /^\d{10,11}$/;
+            var regemail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    
+            function checkValidity(input, regex, message) {
+                if (!regex.test(input.value)) {
+                    alert(message);
+                    input.value = "";
+                    return false;
+                }
+                return true;
+            }
+    
+            function checkEmpty(input, message) {
+                if (input.value == "") {
+                    alert(message); 
+                    return false;
+                }
+                return true;
+            }
+
+           
+            function validateForm() {
+                if (!checkEmpty(id1, "아이디를 입력하세요") ||
+                    !checkEmpty(pw, "비밀번호를 입력하세요") ||
+                    !checkEmpty(pw2, "비밀번호 확인을 입력하세요") ||
+                    !checkEmpty(email, "이메일을 입력하세요") ||
+                    !checkEmpty(name, "이름을 입력하세요") ||
+                    !checkEmpty(birth, "생년월일을 입력하세요") ||
+                    !checkEmpty(phone, "휴대전화번호를 입력하세요")) {
+                    return false;
+                }
+    
+                if (!checkValidity(id1, regId, "아이디는 영문 숫자 조합 8자리 이상이어야 합니다.") ||
+                    !checkValidity(pw, regPw, "비밀번호는 영문, 숫자, 특수문자 조합으로 이루어진 8~15자의 문자를 입력하세요.") ||
+                    !checkValidity(email, regemail, "이메일 형식이 아닙니다.") ||
+                    !checkValidity(birth, regBirth, "생년월일은 6자리 숫자로 입력하세요.") ||
+                    !checkValidity(phone, regPhone, "휴대전화번호는 10자 또는 11자리의 숫자로 입력하세요.")) {
+                    return false;
+                }
+
+                if( pw != pw2 ) {
+                    alert("비밀번호가 일치 하지 않습니다");
+                    return false;
+                } else{
+                    alert("비밀번호가 일치합니다");
+                    return true;
+                }
+
+    
+                alert("회원가입이 완료되었습니다!");
+                return true;
+            }
+    
+            document.querySelector('#subm').onclick = validateForm;
+        }
+    </script>
+</body>
+</html>
