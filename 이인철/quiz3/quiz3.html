@@ -1,0 +1,99 @@
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="imgsec">
+                <hr>
+                <img src="/23-24-WEB-Assignment-03/이인철/quizimg/GDSC.png" id="gdsc">
+            </div>
+            <br>
+            <div class="info_sec1">
+                <form class="up_input" onsubmit="return displayError()" action="success.html">
+                    <div class="a">
+                        <input type="text" name="id" placeholder="아이디" class="input1" id="userid">
+                        <i class="fas fa-user"></i>
+                        <input type="password" name="password" placeholder="비밀번호" class="input1" id="userps">
+                        <i class="fas fa-lock"></i>
+                        <input type="email" name="email" placeholder="이메일" class="input1" id="userem">
+                        <i class="fas fa-envelope"></i>
+                        </div>
+                    <br>
+                    <p id="iderror" style="display: none; color:red; font-size: 3px;">*아이디는 필수입력 항목입니다</p>
+                    <p id="pserror" style="display: none; color:red; font-size:3px;">*비밀번호는 필수입력 항목입니다</p>
+                    <p id="emerror" style="display: none; color:red; font-size:3px;">*이메일은 필수입력 항목입니다</p>
+                    <p id="nameerror" style="display: none; color:red; font-size: 3px;">*이름은 필수입력 항목입니다</p>
+                    <p id="birtherror" style="display: none; color:red; font-size:3px;">*생년월일은 필수입력 항목입니다</p>
+                    <p id="phoneerror" style="display: none; color:red; font-size:3px;">*전화번호는 필수입력 항목입니다</p>
+                    <p id="specialps" style="display: none; color:red; font-size:3px;">*비밀번호에 특수번호를 입력하세요(!@%)와 대문자 소문자도 포함하시오</p>
+
+                    <div class="a">
+                        <input type="text" name="username" placeholder="이름" class="input2" id="username">
+                        <i class="fas fa-user"></i>
+                    
+                        <input type="text" name="birth" placeholder="생년월일6자리" class="input2" id="userbirth">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input type="text" name="phonenum" placeholder="휴대전화" class="input2" id="userphone">
+                        <i class="fas fa-phone"></i>
+                        </div>
+                    <br>
+                    <button id="login" class="log" id="log12" style="width:196px;">로그인</button>
+
+                </form>
+                </div>
+        </div>
+        <script>
+
+            function displayError(){
+                const userid=document.getElementById("userid");
+                const userps=document.getElementById("userps");
+                const userem=document.getElementById("userem");
+                const username=document.getElementById("username");
+                const userbirth=document.getElementById("userbirth");
+                const userphone=document.getElementById("userphone");
+
+                if(!userid.value){
+                    iderror.style.display="block";
+                    return false;
+                }
+                if(!userps.value){
+                    pserror.style.display="block";
+                    return false;
+                }
+                if(!userem.value){
+                    emerror.style.display="block";
+                    return false;
+                }
+                if(!username.value){
+                    nameerror.style.display="block";
+                    return false;
+                }
+                if(!userbirth.value){
+                    birtherror.style.display="block";
+                    return false;
+                }
+                if(!userphone.value){
+                    phoneerror.style.display="block";
+                    return false;
+                }
+                var hasUpperCase = /[A-Z]/.test(userps.value);
+                var hasLowerCase = /[a-z]/.test(userps.value);
+                var hasSpecialChars = /[!@%]/.test(userps.value);
+
+                if (!hasUpperCase || !hasLowerCase || !hasSpecialChars) {
+                    specialps.style.display="block";
+                    return false;
+            }
+            return true;
+        }
+        </script>
+
+    </body>
+    </html>
