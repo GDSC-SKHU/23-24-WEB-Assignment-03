@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>GDSC 로그인</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <!-- 1번 문제 -->
+    <div class="main">
+      <h1 class="logo">
+        <img src="logo.png" alt="로고" />
+      </h1>
+
+      <div class="container">
+        <form id="loginForm" onsubmit="return validateForm()">
+          <div class="input-container">
+            <input type="ID" placeholder="아이디" id="id" class="account" />
+            <input
+              type="password"
+              placeholder="비밀번호"
+              id="password"
+              class="account"
+            />
+            <button id="login" class="account">로그인</button>
+            <p id="alert" class="account"></p>
+
+            <form id="loginForm" onsubmit="return validateForm()"></form>
+            <p>
+              회원이 아니신가요?
+              <a href="javascript:void(0);" id="signupLink">회원가입</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 2번 문제 모달로 구현 -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <span onclick="closeModal()" style="cursor: pointer; float: center"
+          >&times;</span
+        >
+        <div class="signin-container">
+          <img src="GDSC.png" alt="GDSC" class="img-gdsc" />
+          <input type="checkbox" id="checkbox1" onchange="checkCheckboxes()" />
+          <span class="signin-highlight">[필수]</span>
+          <span class="signin-terms">가입약관</span>
+          <div class="terms_box">
+            G서비스를 이용하시거나 서비스 회원으로 가입하실 경우 여러분은 본
+            약관 및 관련 운영 정책을 확인하거나 동의하게 되므로, 잠시 시간을
+            내시어 주의 깊게 살펴봐 주식 바랍니다.
+          </div>
+
+          <input type="checkbox" id="checkbox2" onchange="checkCheckboxes()" />
+          <span class="signin-highlight">[필수]</span>
+          <span class="signin-terms">개인정보 수집</span>
+          <div class="terms_box">
+            실명 인증된 아이디로 가입, 위치기반서비스 이용약관, 이벤트, 혜택
+            정보 수신 동의를 포함합니다.
+          </div>
+          <button
+            class="signin-login"
+            id="loginButton"
+            onclick="openSignupModal()"
+            disabled
+          >
+            로그인
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3번 문제 회원가입 창 -->
+
+    <script>
+      // 1번
+      function validateForm() {
+        var idInput = document.getElementById("id");
+        var passwordInput = document.getElementById("password");
+        var alertMessage = document.getElementById("alert");
+
+        if (idInput.value === "" && passwordInput.value === "") {
+          alert("아이디와 비밀번호를 입력해주세요.");
+          return false;
+        } else if (idInput.value === "") {
+          alert("아이디를 입력해주세요.");
+          return false;
+        } else if (passwordInput.value === "") {
+          alert("비밀번호를 입력해주세요.");
+          return false;
+        } else {
+          return true; // Success 페이지로 리디렉션
+        }
+      }
+
+      //  2번
+      function openModal() {
+        var modal = document.getElementById("signupModal");
+        modal.style.display = "block";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("signupModal");
+        modal.style.display = "none";
+      }
+
+      document
+        .getElementById("signupLink")
+        .addEventListener("click", function () {
+          openModal();
+        });
+
+      function checkCheckboxes() {
+        var checkbox1 = document.getElementById("checkbox1");
+        var checkbox2 = document.getElementById("checkbox2");
+        var loginButton = document.getElementById("loginButton");
+
+        if (checkbox1.checked && checkbox2.checked) {
+          loginButton.disabled = false;
+          loginButton.style.backgroundColor = "#03c75a";
+        } else {
+          loginButton.disabled = true;
+          loginButton.style.backgroundColor = "rgba(121,121,121,0.85)";
+        }
+      }
+
+      function openSignupModal() {
+        location.href = "signup.html";
+      }
+    </script>
+  </body>
+</html>

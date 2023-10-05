@@ -1,0 +1,128 @@
+.img-gdsc {
+  display: block;
+  width: 100px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.container {
+  width: 400px;
+  height: 150px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.main {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  overflow: auto;
+  position: relative;
+  padding-left: 30px;
+  outline-color: #05d161;
+}
+
+.id-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.pw-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.mail-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.login-box {
+  width: 400px;
+}
+
+button {
+  background-color: #03c75a;
+  color: white;
+  width: 100%;
+  height: 45px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+.container-2 {
+  width: 400px;
+  height: 150px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.name-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.birth-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.phone-box {
+  width: 100%;
+  height: 33%;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+ul {
+  list-style: none;
+}
+
+.id-error {
+  padding-top: 10px;
+}
+
+li {
+  color: red;
+  font-size: 5px;
+  text-align: left;
+  margin-left: 30px;
+}
