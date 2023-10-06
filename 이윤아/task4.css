@@ -1,0 +1,61 @@
+img {
+    width: 400px;
+    position: relative;
+    right: 8em;
+    bottom: 60px
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+nav {
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid lightgray;
+    overflow-y: auto; }
+
+ul {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+li {
+    padding: 10px;
+    text-align: left;
+    color: black;
+    border-bottom: 1px solid lightgray;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-container {
+    width: 80%;
+    height: 100%;
+    overflow-y: auto; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-element {
+    display: none; 
+}
+
+.page-number{
+    color: grey;
+    font-size: 50px;
+    font-weight: bolder;
+}

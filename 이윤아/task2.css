@@ -1,0 +1,83 @@
+
+img {
+    width: 400px;
+    position: relative;
+    right: 8em;
+    bottom: 60px
+}
+
+
+#sign_terms{
+    background-color: #464646;
+    height: 35em;
+}
+
+#checkbox01, #checkbox02 {
+    border: 1px solid white; 
+    padding: 20px; 
+    margin-bottom: 20px;
+   
+}
+
+
+
+.accent1 {
+    position: relative;
+    color: #03c75a;
+    margin-left: 20px;
+    bottom: 90px;
+
+}
+.accent2{
+    position: relative;
+    color: #03c75a;
+    bottom: 70px;
+    left: 20px;
+
+}
+
+.submit-btn {
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    margin-left: 40px;
+    width: 30em;
+}
+
+p{
+    border: 1px solid lightgrey;
+    width: 400px;
+    color: grey;
+    padding: 2px;
+    margin: 2px;
+    transform: translateY(-140%)  !important;
+    margin-left: 20px  !important;
+
+}
+
+ .no_accent2{
+    position: relative;
+    color: white;
+    bottom: 70px;
+    left: 20px;
+
+
+}
+
+.no_accent1{
+    position: relative;
+    bottom: 5.6em;
+    left: 10px;
+    color: white;
+}
+
+input[type="checkbox"]{
+    transform: translateY(-666%);
+
+
+}
+
+#checkbox2{
+    position: relative;
+   top: 20px;
+}

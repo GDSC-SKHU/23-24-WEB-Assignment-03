@@ -1,0 +1,37 @@
+img {
+    width: 400px;
+    position: relative;
+    right: 8em;
+    bottom: 60px
+}
+
+.task3-error {
+    color: red; 
+    font-size: 12px;
+}
+
+#task3-btn{
+    border: none;
+    width: 26em;
+    height: 30px;
+    background-color: #03c75a;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.task3-input input[type="text"],
+.task3-input input[type="password"] {
+    width: 100%;
+    border: 1px solid gray; 
+    border-radius: 5px;
+    padding-left: 30px; }
+
+
+i{
+        position: relative;
+        left: 10px;
+        transform: translateY(180%) !important;
+        font-size: 5px !important;
+    }
