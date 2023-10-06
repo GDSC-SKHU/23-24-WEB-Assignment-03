@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./task3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="task3-container">
+        <img src="gdsc_logo1.png" alt="이미지" class="task3-logo">
+        <div class="task3-form">
+            <div class="task3-input">
+                <label for="task3-username"><i class="fa fa-user"></i> </label>
+                <input type="text" class="task3-id-input" placeholder="아이디" id="task3-username">
+            </div>
+            <div class="task3-input">
+                <label for="task3-password"><i class="fa fa-lock"></i> </label>
+                <input type="password" class="task3-pw-input" placeholder="비밀번호" id="task3-password">
+            </div>
+            <div class="task3-input">
+                <label for="task3-email"><i class="fa fa-envelope"></i> </label>
+                <input type="text" class="task3-email-input" placeholder="이메일" id="task3-email">
+            </div>
+            <div class="task3-error-container">
+                <ul class="task3-error task3-id-error"></ul>
+                <ul class="task3-error task3-pw-error"></ul><br>
+                <ul class="task3-error task3-email-error"></ul>
+            </div>
+        </div>
+        <div class="task3-info">
+            <div class="task3-input">
+                <label for="task3-name"><i class="fa fa-user"></i> </label>
+                <input type="text" class="task3-name-input" placeholder="이름" id="task3-name">
+            </div>
+            <div class="task3-input">
+                <label for="task3-birth"><i class="fa fa-calendar"></i> </label>
+                <input type="text" class="task3-birth-input" placeholder="생년월일6자리" id="task3-birth">
+            </div>
+            <div class="task3-input">
+                <label for="task3-number"><i class="fa fa-phone"></i> </label>
+                <input type="text" class="task3-phone-input" placeholder="휴대전화" id="task3-number">
+            </div>
+        </div>
+        <button class="task3-login" id="task3-btn">로그인</button>
+    </div>
+
+    <script src="task3.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+header {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center; 
+    height: 6.25em;
+}
+
+#logo1 {
+    margin: 0;
+    padding: 0 auto;
+    width: 25em;
+    height: 18.75em;
+    margin-right: 31.25em;
+    position: relative;
+    right: 8.13em;
+
+}
+
+content{
+    font-size: 3em;
+    height: 70%;
+}
+
+p{
+    margin-bottom: 0.31em;
+    margin-top: 0;
+}
+*{
+    text-align: center;
+}
+
+#login_div1{
+    height: 250px;
+    background-color: lightgrey;
+    border-radius: 6px;
+}
+
+.submit-btn{
+    border: 1px solid black;
+    width: 26em;
+    height: 30px;
+    background-color: #03c75a;
+    color: white;
+    border-radius: 5px;
+}
+
+.input-container {
+    position: relative;
+  }
+
+  .text-field {
+    text-align: left;
+    width: 24em;
+    padding-left: 30px;
+    border: 1px solid black;
+ }
+  
+
+.icon {
+    position: absolute;
+    left: 29px;
+    top: 50%; 
+    transform: translateY(40%);
+    font-size: 3px !important;
+}
+
+input[type="text"]{
+    margin-top: 20px;
+
+
+}
+input[type="password"]{
+position:relative;
+
+}
+
+#logo2{
+    width: 5em;
+}
